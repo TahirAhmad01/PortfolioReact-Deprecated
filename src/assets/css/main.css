@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .customContainer {
+    @apply px-28 py-20;
+  }
+}
