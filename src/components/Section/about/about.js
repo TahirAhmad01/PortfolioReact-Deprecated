@@ -1,11 +1,14 @@
 import React from "react";
-import picture from "../../assets/images/myPic.jpg";
+import Zoom from "react-reveal/Zoom";
+import picture from "./../../../assets/images/myPic.jpg";
 
 export default function About(props) {
   return (
     <div className=" bg-slate-100 flex items-center">
       <div className="w-1/2">
-        <img src={picture} alt="" />
+        <Zoom>
+          <img src={picture} alt="" />
+        </Zoom>
       </div>
       <div className="w-1/2 pl-10 pr-28">
         <h4 className="text-4xl">About Me</h4>
