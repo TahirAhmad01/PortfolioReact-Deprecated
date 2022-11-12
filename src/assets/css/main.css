@@ -6,4 +6,8 @@
   .customContainer {
     @apply px-28 py-20;
   }
+
+  .background {
+    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover;
+  }
 }
