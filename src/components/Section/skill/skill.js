@@ -5,7 +5,7 @@ import ProgressBar from "./progressBar";
 export default function Skill() {
   return (
     <>
-      <div className="container py-20">
+      <div className=" containerCustom py-20">
         <Title />
         <div className="flex flex-wrap">
           <ProgressBar />

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={`h-[100vh] background`}>
       {" "}
-      <div className="h-full w-full bg-black/15 p-10">
+      <div className="h-full w-full bg-black/15 container pb-7 pt-28">
         <div className="backdrop-blur-xl bg-white/40 dark:bg-white/20 rounded-2xl h-full w-full flex items-center justify-center flex-col overflow-hidden px-28 ">
           <div className="h-36 w-36 overflow-hidden rounded-full bg-white mb-4">
             <img src={avatar} alt="avatar" />
