@@ -7,6 +7,7 @@ import Project from "./components/Section/project/project";
 import Resume from "./components/Section/resume/resume";
 
 import Skill from "./components/Section/skill/skill";
+import TestimonialCom from "./components/Section/testimonial/testimonial";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Skill />
       <Project />
       <Resume />
+      <TestimonialCom />
     </Layout>
   );
 }
