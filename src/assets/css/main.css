@@ -8,7 +8,7 @@
   }
 
   .background {
-    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover;
+    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.webp")] bg-cover;
   }
 
   .containerCustom {
@@ -17,6 +17,7 @@
     margin-right: auto;
     margin-left: auto;
   }
+
   @media (min-width: 768px) {
     .containerCustom {
       width: 750px;
@@ -32,4 +33,8 @@
       width: 1170px;
     }
   }
+}
+
+.owl-carousel .owl-item img {
+  width: auto !important;
 }

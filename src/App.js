@@ -2,6 +2,7 @@ import React from "react";
 import "./assets/css/main.css";
 import Layout from "./components/layout";
 import About from "./components/Section/about/about";
+import Contact from "./components/Section/Contact/contact";
 import Home from "./components/Section/home/home";
 import Project from "./components/Section/project/project";
 import Resume from "./components/Section/resume/resume";
@@ -18,6 +19,7 @@ function App() {
       <Project />
       <Resume />
       <TestimonialCom />
+      <Contact />
     </Layout>
   );
 }

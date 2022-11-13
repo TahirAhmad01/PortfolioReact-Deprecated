@@ -5,8 +5,8 @@ import WorkExperience from "./workExperience";
 export default function Resume(props) {
   return (
     <>
-      <div className="containerCustom">
-        <Title />
+      <div className="containerCustom gap">
+        <Title title="RESUME" />
 
         <div className="flex flex-wrap">
           <div className="w-1/2">

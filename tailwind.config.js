@@ -42,6 +42,10 @@ module.exports = {
         ".containerCustom": {
           //
         },
+
+        ".gap": {
+          padding: "55px 0",
+        },
       });
     }),
   ],
