@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../title";
 import ContactInp from "./contactInp";
 
-export default function Contact(props) {
+export default function ContactMe() {
   return (
     <>
       <div className="containerCustom gap">
