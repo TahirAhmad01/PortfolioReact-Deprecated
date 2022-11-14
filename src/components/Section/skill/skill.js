@@ -6,7 +6,7 @@ export default function Skill() {
   return (
     <>
       <div className=" containerCustom gap">
-        <Title />
+        <Title title="skill" />
         <div className="flex flex-wrap">
           <ProgressBar />
           <ProgressBar />
