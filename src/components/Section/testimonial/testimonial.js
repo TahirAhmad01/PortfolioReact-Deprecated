@@ -10,7 +10,7 @@ export default function Testimonial() {
   const options = {
     margin: 30,
     responsiveClass: true,
-    smartSpeed: 1000,
+    smartSpeed: 200,
     responsive: {
       0: {
         items: 1,

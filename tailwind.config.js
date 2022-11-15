@@ -35,7 +35,7 @@ module.exports = {
           backgroundColor: theme("colors.white"),
           borderRadius: theme("borderRadius.lg"),
           padding: theme("spacing.6"),
-          boxShadow: theme("boxShadow.xl"),
+          boxShadow: "-8px 8px 16px #bebebe,8px -8px 16px #ffffff",
         },
       });
       addUtilities({

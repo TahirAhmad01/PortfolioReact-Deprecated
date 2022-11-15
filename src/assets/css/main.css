@@ -12,8 +12,8 @@
   }
 
   .containerCustom {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
     margin-right: auto;
     margin-left: auto;
   }

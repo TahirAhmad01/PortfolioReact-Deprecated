@@ -8,7 +8,10 @@ export default function Resume() {
       <div className="containerCustom gap">
         <Title title="experience" />
 
-        <div className="flex flex-wrap">
+        <div className="w-full">
+          <WorkExperience />
+          <WorkExperience />
+          <WorkExperience />
           <WorkExperience />
         </div>
         {/* <div className="w-1/2">
