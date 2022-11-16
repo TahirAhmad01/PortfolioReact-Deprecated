@@ -19,6 +19,7 @@
     "react-testimonial": "^1.0.0",
     "react-toggle-dark-mode": "^1.1.1",
     "react-typed": "^1.2.0",
+    "react-wavify": "^1.6.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

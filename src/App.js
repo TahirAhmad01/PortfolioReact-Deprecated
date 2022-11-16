@@ -2,6 +2,7 @@ import React from "react";
 import "./assets/css/main.css";
 import Layout from "./components/layout";
 import About from "./components/Section/about/about";
+import Blog from "./components/Section/blog/blog";
 import Contact from "./components/Section/contactMe/contactMe";
 import Home from "./components/Section/home/home";
 import Project from "./components/Section/project/project";
@@ -17,6 +18,7 @@ function App() {
       <Skill />
       <Project />
       <Resume />
+      <Blog />
       <Testimonial />
       <Contact />
     </Layout>
