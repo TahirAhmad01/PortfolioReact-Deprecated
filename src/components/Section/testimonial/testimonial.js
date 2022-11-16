@@ -1,8 +1,9 @@
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import React from "react";
+import { Slide } from "react-awesome-reveal";
 import OwlCarousel from "react-owl-carousel";
-import { Fade } from "react-reveal";
+
 import Title from "../title";
 import Feedback from "./feedback";
 
@@ -32,7 +33,7 @@ export default function Testimonial() {
       <div className="containerCustom gap">
         <Title title="CLIENT FEEDBACK" />
         <OwlCarousel className="owl-theme" loop margin={1} {...options}>
-          <Fade bottom>
+          <Slide direction="up" duration={700} cascade>
             <Feedback />
             <Feedback />
             <Feedback />
@@ -42,7 +43,7 @@ export default function Testimonial() {
             <Feedback />
             <Feedback />
             <Feedback />
-          </Fade>
+          </Slide>
         </OwlCarousel>
       </div>
     </>

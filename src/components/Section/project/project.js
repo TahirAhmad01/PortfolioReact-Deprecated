@@ -1,4 +1,5 @@
 import React from "react";
+import { Slide } from "react-awesome-reveal";
 import Title from "../title";
 
 export default function Project(props) {
@@ -6,7 +7,9 @@ export default function Project(props) {
     <>
       <div className="containerCustom gap">
         <Title title="LETEST WORK" />
-        <div>project list here</div>
+        <div>
+          <Slide down direction="up">project list here</Slide>
+        </div>
       </div>
     </>
   );
