@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
@@ -8,7 +9,20 @@ module.exports = {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        lightShadow: " -3px -3px 7px #ffffff, 3px 3px 5px #ceced1",
+        darkShadow: " 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b",
+        insetShadow: "inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1",
+        darkInsetShadow:
+          "inset -3px -3px 7px #393939, inset 3px 3px 5px #181818",
+      },
+    },
+    fontFamily: {
+      sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
+      ubutu: ["Ubuntu", "sans-serif"],
+      nunito: ["Nunito", "sans-serif"],
+    },
   },
   plugins: [
     require("flowbite/plugin"),

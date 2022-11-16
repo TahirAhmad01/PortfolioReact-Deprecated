@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div className="relative dark:text-white bg-gray-50 dark:bg-[#111827] transition-all overflow-hidden">
+    <div className="relative dark:text-white bg-gray-50 dark:bg-[#111827] transition-all overflow-hidden font-nunito">
       <Navbar />
       {children}
       <Footer />

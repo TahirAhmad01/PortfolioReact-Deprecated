@@ -29,7 +29,7 @@ export default function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/#" className="hover:underline">
                 Contact
               </a>
             </li>

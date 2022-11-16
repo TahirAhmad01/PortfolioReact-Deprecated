@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Info(props) {
+export default function Info({ name, details }) {
   return (
     <>
-      <div className="flex">
-        <div className="w-[75px]">Age</div>
-        <div>21</div>
+      <div className="flex py-1 flex-wrap">
+        <div className="w-full md:w-[85px] capitalize">{name} :</div>
+        <div className="font-semibold">{details}</div>
       </div>
     </>
   );
