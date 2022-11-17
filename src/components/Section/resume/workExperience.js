@@ -11,7 +11,7 @@ export default function WorkExperience() {
             <img src={img} alt="" />
           </div>
           <div className="overflow-hidden">
-            <h4 className="font-medium">
+            <h4 className="font-medium text-lg">
               <Fade left>Front end web developement</Fade>
             </h4>
             <div className="text-gray-500 dark:text-gray-200 text-sm">
@@ -30,7 +30,7 @@ export default function WorkExperience() {
           </div>
         </div>
         <div>
-          <div className="ml-20">
+          <div className="md:ml-20 mt-3 md:mt-0">
             <Fade up>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nam
               iure praesentium nobis quis expedita repellat, officia possimus

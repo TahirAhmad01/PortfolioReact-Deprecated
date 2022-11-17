@@ -3,7 +3,7 @@ import React from "react";
 export default function BlogCard(props) {
   return (
     <>
-      <div className="max-w-sm  my-3 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-full my-3 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <a href="/#">
           <img
             className="rounded-t-lg"

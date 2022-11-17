@@ -33,11 +33,11 @@ export default function NavbarP() {
         <div>logo</div>
         <div className="flex items-center">
           <div>menu</div>
-          <div className="w-28">
+          <div className="w-7 flex justify-end">
             <DarkModeSwitch
               checked={isDarkMode}
               onChange={toggleDarkMode}
-              size={30}
+              size={19}
             />
           </div>
         </div>
