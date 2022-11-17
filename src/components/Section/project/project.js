@@ -1,16 +1,12 @@
+import { AnimatePresence } from "framer-motion";
 import React from "react";
-import { Slide } from "react-awesome-reveal";
-import Title from "../title";
+import ProjectButton from "./projectButton";
 
-export default function Project(props) {
+export default function Project() {
   return (
-    <>
-      <div className="containerCustom gap">
-        <Title title="LETEST WORK" />
-        <div>
-          <Slide down direction="up">project list here</Slide>
-        </div>
-      </div>
-    </>
+    <div className="containerCustom">
+      <ProjectButton />
+      <AnimatePresence>{/*  */}</AnimatePresence>
+    </div>
   );
 }

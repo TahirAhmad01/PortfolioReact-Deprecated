@@ -33,7 +33,7 @@ export default function Testimonial() {
       <div className="containerCustom gap">
         <Title title="CLIENT FEEDBACK" />
         <OwlCarousel className="owl-theme" loop margin={1} {...options}>
-          <Slide direction="up" duration={700} cascade>
+          <Slide direction="up" duration={900}>
             <Feedback />
             <Feedback />
             <Feedback />

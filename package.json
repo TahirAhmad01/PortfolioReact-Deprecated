@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "flowbite": "^1.5.3",
     "flowbite-react": "^0.3.3",
+    "framer-motion": "^7.6.7",
     "isotope-layout": "^3.0.6",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.1.0",

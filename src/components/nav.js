@@ -6,7 +6,7 @@ export default function NavbarP() {
   const [theme, setTheme] = useState(localStorage.theme);
 
   const colorTheme = theme === "dark" ? "light" : "dark";
-  console.log(theme);
+  // console.log(theme);
 
   const toggleDarkMode = (checked) => {
     setTheme(colorTheme);
