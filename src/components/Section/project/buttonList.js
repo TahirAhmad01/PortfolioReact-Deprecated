@@ -19,6 +19,11 @@ const buttonList = [
     name: "next",
     category: "next",
   },
+  {
+    id: 1,
+    name: "jquery",
+    category: "jquery",
+  },
 ];
 
 export default buttonList;

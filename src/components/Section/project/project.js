@@ -1,12 +1,20 @@
 import { AnimatePresence } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
+import Title from "../title";
 import ProjectButton from "./projectButton";
+import projectList from "./projectList";
+import Projects from "./projects";
 
 export default function Project() {
+  const [items, setItems] = useState(projectList);
+
   return (
     <div className="containerCustom">
-      <ProjectButton />
-      <AnimatePresence>{/*  */}</AnimatePresence>
+      <Title title="projects" />
+      <ProjectButton setItem={setItems} items={items} />
+      <AnimatePresence>
+        <Projects items={items} />
+      </AnimatePresence>
     </div>
   );
 }
