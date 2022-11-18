@@ -21,7 +21,7 @@ export default function ProjectButton({ setItem, items }) {
       <div className="text-center mb-6">
         {buttonList.map((btn) => (
           <button
-            className={`mx-1 px-5 py-1 capitalize bg-slate-200 rounded-3xl text-sm ${
+            className={`mx-1 px-5 py-1 capitalize bg-slate-200 rounded-3xl text-sm dark:text-black ${
               activeBtn === btn.category &&
               "bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl text-white"
             }`}

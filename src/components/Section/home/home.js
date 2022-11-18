@@ -9,7 +9,7 @@ export default function Home() {
     <div className={`md:h-[100vh] background relative`}>
       {" "}
       <div className="h-auto pt-24 md:h-full bg-black/15 pb-7 md:pt-28  containerCustom relative z-20">
-        <div className="backdrop-blur bg-white/40 dark:bg-white/20 rounded-2xl h-full w-full relative overflow-hidden">
+        <div className="backdrop-blur bg-white/40 dark:bg-black/40 rounded-2xl h-full w-full relative overflow-hidden">
           <div className=" flex items-center justify-center flex-col overflow-hidden md:px-28 h-full w-full relative  z-20 py-16 pb-24 mx:py-0 md:pb-10">
             <div className="h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
               <img src={avatar} alt="avatar" />

@@ -14,7 +14,7 @@
   }
 
   .background {
-    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.webp")] bg-cover;
+    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover;
   }
 
   .customButton {
@@ -80,6 +80,6 @@
   transform: scale(0.9);
 }
 
-.projectBtn:hover .slide-up{
+.projectBtn:hover .slide-up {
   bottom: 0;
 }
