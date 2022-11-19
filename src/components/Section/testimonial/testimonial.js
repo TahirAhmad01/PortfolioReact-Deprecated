@@ -7,6 +7,8 @@ import OwlCarousel from "react-owl-carousel";
 import Title from "../title";
 import Feedback from "./feedback";
 
+const feedback = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
 export default function Testimonial() {
   const options = {
     margin: 30,
@@ -34,15 +36,9 @@ export default function Testimonial() {
         <Title title="CLIENT FEEDBACK" />
         <OwlCarousel className="owl-theme" loop margin={1} {...options}>
           <Slide direction="up" duration={900}>
-            <Feedback />
-            <Feedback />
-            <Feedback />
-            <Feedback />
-            <Feedback />
-            <Feedback />
-            <Feedback />
-            <Feedback />
-            <Feedback />
+            {feedback.map((f) => (
+              <Feedback />
+            ))}
           </Slide>
         </OwlCarousel>
       </div>
