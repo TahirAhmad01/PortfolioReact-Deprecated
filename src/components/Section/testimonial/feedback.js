@@ -9,7 +9,7 @@ export default function Feedback({ star }) {
 
   return (
     <>
-      <div className="item">
+      <div className="item hover:scale-105">
         {/* <Fade bottom delay={50}> */}
         <div className="swiper-slide">
           <blockquote className="rounded-lg bg-gray-100 p-8">

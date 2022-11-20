@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
+import menuList from "../utils/manuList";
 
 export default function NavbarP() {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -36,7 +37,15 @@ export default function NavbarP() {
       <div className="containerCustom flex items-center justify-between h-full">
         <div>logo</div>
         <div className="flex items-center">
-          <div>menu</div>
+          <div className=" hidden md:block">
+            <ul className="flex">
+              {menuList.map((menu) => (
+                <a href="/#">
+                  <li className="px-3">{menu.name}</li>
+                </a>
+              ))}
+            </ul>
+          </div>
           <div className="w-7 flex justify-end">
             <DarkModeSwitch
               checked={isDarkMode}
