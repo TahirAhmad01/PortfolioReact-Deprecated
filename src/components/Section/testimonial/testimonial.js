@@ -4,10 +4,9 @@ import React from "react";
 import { Slide } from "react-awesome-reveal";
 import OwlCarousel from "react-owl-carousel";
 
+import feedbackList from "../../../utils/feedbackList";
 import Title from "../title";
 import Feedback from "./feedback";
-
-const feedback = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
 export default function Testimonial() {
   const options = {
@@ -36,8 +35,14 @@ export default function Testimonial() {
         <Title title="CLIENT FEEDBACK" />
         <OwlCarousel className="owl-theme" loop margin={1} {...options}>
           <Slide direction="up" duration={900}>
-            {feedback.map((f) => (
-              <Feedback />
+            {feedbackList.map((feedback, idx) => (
+              <div key={idx}>
+                <Feedback
+                  name={feedback.name}
+                  description={feedback.description}
+                  star={feedback.star}
+                />
+              </div>
             ))}
           </Slide>
         </OwlCarousel>

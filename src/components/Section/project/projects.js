@@ -7,7 +7,7 @@ export default function Projects({ items }) {
     <>
       <div className="lg:columns-3 md:columns-2 columns-1 gap-3">
         {items.map((item, idx) => (
-          <Fade>
+          <Fade key={idx}>
             <a href="/#">
               <motion.div
                 key={idx}

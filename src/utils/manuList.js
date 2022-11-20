@@ -16,10 +16,6 @@ const menuList = [
     link: "/projects",
   },
   {
-    name: "Feedback",
-    link: "/feedback",
-  },
-  {
     name: "contact",
     link: "/contact",
   },

@@ -1,15 +1,15 @@
 import React from "react";
 import Ratings from "./ratings";
 
-export default function Feedback({ star }) {
+export default function Feedback({ star, name, description }) {
   const rating = [];
   for (let i = 0; i < (star || 5); i++) {
-    rating.push(<Ratings />);
+    rating.push(<Ratings key={i} />);
   }
 
   return (
     <>
-      <div className="item hover:scale-105">
+      <div className="item">
         {/* <Fade bottom delay={50}> */}
         <div className="swiper-slide">
           <blockquote className="rounded-lg bg-gray-100 p-8">
@@ -25,19 +25,13 @@ export default function Feedback({ star }) {
                   {rating}
                 </div>
 
-                <p className="mt-1 text-lg font-medium text-gray-700">
-                  Paul Starr
-                </p>
+                <p className="mt-1 text-lg font-medium text-gray-700">{name}</p>
               </div>
             </div>
 
-            <p className="mt-4 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-              voluptatem alias ut provident sapiente repellendus.
-            </p>
+            <p className="mt-4 text-gray-500">{description}</p>
           </blockquote>
         </div>
-        {/* </Fade> */}
       </div>
     </>
   );

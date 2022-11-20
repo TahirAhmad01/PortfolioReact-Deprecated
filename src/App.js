@@ -1,27 +1,26 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/css/main.css";
 import Layout from "./components/layout";
 import About from "./components/Section/about/about";
-import Blog from "./components/Section/blog/blog";
-import Contact from "./components/Section/contactMe/contactMe";
-import Home from "./components/Section/home/home";
+import ContactMe from "./components/Section/contactMe/contactMe";
 import Project from "./components/Section/project/project";
-import Resume from "./components/Section/resume/resume";
 import Skill from "./components/Section/skill/skill";
-import Testimonial from "./components/Section/testimonial/testimonial";
+import Home from "./pages/home";
 
 function App() {
   return (
-    <Layout>
-      <Home />
-      <About />
-      <Skill />
-      <Project />
-      <Resume />
-      <Blog />
-      <Testimonial />
-      <Contact />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skill" element={<Skill />} />
+          <Route path="/projects" element={<Project />} />
+          <Route path="/contact" element={<ContactMe />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

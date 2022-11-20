@@ -18,8 +18,12 @@ export default function Skill() {
           <ProgressBar />
           <ProgressBar /> */}
 
-          {data.map((skill) => (
-            <ProgressBar name={skill.name} progress={skill.progress} />
+          {data.map((skill, idx) => (
+            <ProgressBar
+              name={skill.name}
+              progress={skill.progress}
+              key={idx}
+            />
           ))}
         </div>
       </div>

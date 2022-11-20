@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
@@ -39,10 +40,10 @@ export default function NavbarP() {
         <div className="flex items-center">
           <div className=" hidden md:block">
             <ul className="flex">
-              {menuList.map((menu) => (
-                <a href="/#">
-                  <li className="px-3">{menu.name}</li>
-                </a>
+              {menuList.map((menu, idx) => (
+                <li className="px-3" key={idx}>
+                  <Link to={menu?.link}>{menu.name}</Link>
+                </li>
               ))}
             </ul>
           </div>

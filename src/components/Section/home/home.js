@@ -76,14 +76,14 @@ export default function Home() {
             <div className="flex mt-5">
               <button
                 type="button"
-                class=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md:px-9 py-3.5 text-center mr-2 mb-2 text-white   "
+                className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md:px-9 py-3.5 text-center mr-2 mb-2 text-white   "
               >
                 Get in touch
               </button>
 
               <button
                 type="button"
-                class=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md-px-9 py-3.5 text-center mr-2 mb-2 text-white   "
+                className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md-px-9 py-3.5 text-center mr-2 mb-2 text-white   "
               >
                 Download CV
               </button>

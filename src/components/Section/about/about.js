@@ -44,11 +44,11 @@ export default function About(props) {
               </div>
             </Fade>
           </div>
-          <div className="h-auto w-full mt-5 md:mt-0 overflow-hidden rounded-xl md:col-span-4 lg:col-span-4 aspect-[4/4]">
-            <Zoom>
+          <Zoom>
+            <div className="h-auto w-full mt-5 md:mt-0 overflow-hidden rounded-xl md:col-span-4 lg:col-span-4 aspect-[4/4]">
               <img src={picture} alt="" className="w-full" />
-            </Zoom>
-          </div>
+            </div>{" "}
+          </Zoom>
         </div>
       </div>
     </div>
