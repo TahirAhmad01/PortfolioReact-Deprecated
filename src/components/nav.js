@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import "../assets/css/mobileMenu.css";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
 
 export default function NavbarP() {
   const [isDarkMode, setDarkMode] = useState(false);
   const [theme, setTheme] = useState(localStorage.theme);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const colorTheme = theme === "dark" ? "light" : "dark";
   // console.log(theme);
@@ -28,6 +30,10 @@ export default function NavbarP() {
 
     localStorage.setItem("theme", theme);
   }, [colorTheme, isDarkMode, theme]);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
 
   return (
     <div
@@ -53,6 +59,16 @@ export default function NavbarP() {
               onChange={toggleDarkMode}
               size={19}
             />
+          </div>
+          <div
+            className={`md:hidden  menu_icon flex flex-col items-start ${
+              openMenu && "change"
+            }`}
+            onClick={toggleMenu}
+          >
+            <div className="bar1 bg-black dark:bg-white"></div>
+            <div className="bar2 bg-black dark:bg-white"></div>
+            <div className="bar3 bg-black dark:bg-white"></div>
           </div>
         </div>
       </div>

@@ -59,7 +59,8 @@ module.exports = {
         },
 
         ".gap": {
-          padding: "55px 0",
+          paddingTop: "55px",
+          paddingBottom: "55px",
         },
       });
     }),
