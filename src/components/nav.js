@@ -90,7 +90,7 @@ export default function NavbarP() {
       >
         <ul>
           {menuList.map((menu, idx) => (
-            <Link to={menu?.link}>
+            <Link to={menu?.link} onClick={toggleMenu}>
               <li key={idx} className="py-1 block w-full">
                 {menu.name}
               </li>

@@ -15,15 +15,6 @@ export default function Layout({ children }) {
       <Navbar />
       {children}
       <Footer />
-      {/* 
-      <button
-        className={`fixed bottom-6 right-6 bg-slate-800 px-5 py-3 rounded-lg text-white transition-all ${
-          scrollY > 250 ? "block" : "hidden"
-        }`}
-        onClick={backToTop}
-      >
-        top
-      </button> */}
 
       <button
         x-data="topBtn"

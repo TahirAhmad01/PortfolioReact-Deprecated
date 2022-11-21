@@ -9,7 +9,7 @@ export default function Project() {
   const [items, setItems] = useState(projectList);
 
   return (
-    <div className="containerCustom">
+    <div className="containerCustom gap">
       <Title title="projects" />
       <ProjectButton setItem={setItems} items={items} />
       <AnimatePresence>
