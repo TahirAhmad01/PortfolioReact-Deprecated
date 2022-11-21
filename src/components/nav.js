@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import "../assets/css/mobileMenu.css";
+import useWindowDimensions from "../hook/getWindowDimensions";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
 
@@ -9,6 +10,7 @@ export default function NavbarP() {
   const [isDarkMode, setDarkMode] = useState(false);
   const [theme, setTheme] = useState(localStorage.theme);
   const [openMenu, setOpenMenu] = useState(false);
+  const { width } = useWindowDimensions();
 
   const colorTheme = theme === "dark" ? "light" : "dark";
   // console.log(theme);
@@ -31,14 +33,20 @@ export default function NavbarP() {
     localStorage.setItem("theme", theme);
   }, [colorTheme, isDarkMode, theme]);
 
+  useEffect(() => {
+    if (width > 768 && openMenu) {
+      setOpenMenu(false);
+    }
+  }, [openMenu, width]);
+
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
 
   return (
     <div
-      className={`backdrop-blur-xl bg-slate-100/40 dark:bg-[#0b1327]/70 w-full top-0 left-0 fixed z-50 h-20 transition-all duration-200 ${
-        scrollY > 80 && "h-16"
+      className={`backdrop-blur-xl bg-slate-100/40 dark:bg-[#0b1327]/70 w-full top-0 left-0 fixed z-50 py-6 transition-all duration-200 border-b-2 border-gray-100 dark:border-gray-700 ${
+        scrollY > 80 && "py-5"
       }`}
     >
       <div className="containerCustom flex items-center justify-between h-full">
@@ -47,9 +55,11 @@ export default function NavbarP() {
           <div className=" hidden md:block">
             <ul className="flex">
               {menuList.map((menu, idx) => (
-                <li className="px-3" key={idx}>
-                  <Link to={menu?.link}>{menu.name}</Link>
-                </li>
+                <Link to={menu?.link}>
+                  <li className="px-3" key={idx}>
+                    {menu.name}
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -71,6 +81,22 @@ export default function NavbarP() {
             <div className="bar3 bg-black dark:bg-white"></div>
           </div>
         </div>
+      </div>
+
+      <div
+        className={`transition-all containerCustom pt-5 ${
+          openMenu ? "block " : "hidden"
+        } `}
+      >
+        <ul>
+          {menuList.map((menu, idx) => (
+            <Link to={menu?.link}>
+              <li key={idx} className="py-1 block w-full">
+                {menu.name}
+              </li>
+            </Link>
+          ))}
+        </ul>
       </div>
     </div>
   );

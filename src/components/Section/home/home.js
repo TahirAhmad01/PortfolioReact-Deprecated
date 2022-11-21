@@ -3,14 +3,27 @@ import { Fade } from "react-reveal";
 import Typed from "react-typed";
 import Wave from "react-wavify";
 import avatar from "../../../assets/images/avater.webp";
+import useWindowDimensions from "../../../hook/getWindowDimensions";
 
 export default function Home() {
+  const { height, width } = useWindowDimensions();
+
+  console.log(height);
+
   return (
-    <div className={`md:h-[100vh] background relative`}>
+    <div
+      className={` background relative ${
+        height > 650 && width > 768 && "md:h-[100vh]"
+      }`}
+    >
       {" "}
       <div className="h-auto pt-24 md:h-full bg-black/15 pb-7 md:pt-28  containerCustom relative z-20">
         <div className="backdrop-blur bg-white/40 dark:bg-black/40 rounded-2xl h-full w-full relative overflow-hidden">
-          <div className=" flex items-center justify-center flex-col overflow-hidden md:px-28 h-full w-full relative  z-20 py-16 pb-24 mx:py-0 md:pb-10">
+          <div
+            className={` flex items-center justify-center flex-col overflow-hidden md:px-28 h-full w-full relative  z-20 py-16 pb-24 mx:py-0  ${
+              height > 650 && width > 768 && "pb-16"
+            }`}
+          >
             <div className="h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
               <img src={avatar} alt="avatar" />
             </div>
