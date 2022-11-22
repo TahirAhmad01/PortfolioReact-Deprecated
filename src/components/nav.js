@@ -1,4 +1,4 @@
-import React, { useEffect, useState, window } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import "../assets/css/mobileMenu.css";
@@ -16,13 +16,14 @@ export default function NavbarP() {
   // console.log(theme);
   const { scrollY } = useWindowScrollPositions();
 
+
   const toggleDarkMode = (checked) => {
     setTheme(colorTheme);
     setDarkMode(checked);
   };
 
   useEffect(() => {
-    const root = window.document.documentElement;
+    const root = document.documentElement;
     root.classList.remove(colorTheme);
     root.classList.add(theme);
 

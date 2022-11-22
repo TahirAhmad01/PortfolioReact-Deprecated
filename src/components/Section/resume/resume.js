@@ -8,7 +8,7 @@ export default function Resume() {
       <div className="containerCustom gap">
         <Title title="experience" />
 
-        <div className="w-full">
+        <div className="grid grid-cols-1 gap-4">
           <WorkExperience />
           <WorkExperience />
           <WorkExperience />

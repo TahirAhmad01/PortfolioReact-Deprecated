@@ -1,36 +1,40 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import img from "../../../../src/assets/images/avater.webp";
 
 export default function WorkExperience() {
   return (
     <>
-      <div className="mb-3 p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
+      <div className="mb-3 p-6 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
         <div className="flex items-center">
-          <div className="w-20 h-20 overflow-hidden rounded-full">
+          {/* <div className="w-20 h-20 overflow-hidden rounded-full">
             <img src={img} alt="" />
-          </div>
-          <div className="overflow-hidden">
-            <h4 className="font-medium text-lg">
-              <Fade left>Front end web developement</Fade>
-            </h4>
-            <div className="text-gray-500 dark:text-gray-200 text-sm">
-              <Fade left delay={150}>
-                <div>
-                  <span>Web developement</span>
-                  <span>Dhaka Bangladesh</span>
+          </div> */}
+          <div className="overflow-hidden w-full">
+            <div className="flex justify-between items-center">
+              <div>
+                <h2 className="font-medium text-lg">
+                  <Fade left>Front end web developement</Fade>
+                </h2>
+                <div className="text-gray-500 dark:text-gray-200 text-sm">
+                  <Fade left delay={150}>
+                    <div>
+                      <span>Web developement</span>
+                      <span>Dhaka Bangladesh</span>
+                    </div>
+                  </Fade>
                 </div>
-                <div>
-                  <span>19 Dec,2019</span>
-                  <span> - </span>
-                  <span>19 Dec,2021</span>
-                </div>
-              </Fade>
+              </div>
+
+              <div className="text-gray-500 dark:text-gray-200 text-xs">
+                <span>19 Dec,2019</span>
+                <span> - </span>
+                <span>19 Dec,2021</span>
+              </div>
             </div>
           </div>
         </div>
         <div>
-          <div className="md:ml-20 mt-3 md:mt-0">
+          <div className="mt-5">
             <Fade up>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nam
               iure praesentium nobis quis expedita repellat, officia possimus
