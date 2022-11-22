@@ -17,7 +17,7 @@ export default function Home() {
       }`}
     >
       {" "}
-      <div className="h-auto pt-24 md:h-full bg-black/15 pb-7 md:pt-28  containerCustom relative z-20">
+      <div className="h-auto pt-20 md:h-full bg-black/15 pb-6 md:pt-24  containerCustom relative z-20">
         <div className="backdrop-blur bg-white/40 dark:bg-black/40 rounded-2xl h-full w-full relative overflow-hidden">
           <div
             className={` flex items-center justify-center flex-col overflow-hidden md:px-28 h-full w-full relative  z-20 py-16 pb-24 mx:py-0  ${
@@ -27,11 +27,6 @@ export default function Home() {
             <div className="h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
               <img src={avatar} alt="avatar" />
             </div>
-            {/* <div>
-              <Fade up cascade>
-                Hello i'm
-              </Fade>
-            </div> */}
             <h2 className="text-3xl md:text-4xl font-medium pb-4 pt-2 ">
               <Fade up cascade>
                 Tahir Ahmad (Sani)
