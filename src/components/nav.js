@@ -9,54 +9,51 @@ import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
 
 export default function NavbarP() {
-  const [isDarkMode, setDarkMode] = useState(false);
   const [theme, setTheme] = useState(localStorage.theme);
   const [openMenu, setOpenMenu] = useState(false);
   const { width } = useWindowDimensions();
 
   const colorTheme = theme === "dark" ? "light" : "dark";
-  // console.log(theme);
+
+  console.log(theme);
+
   const { scrollY } = useWindowScrollPositions();
 
-  const toggleDarkMode = (checked) => {
+  const toggleDarkMode = () => {
     setTheme(colorTheme);
-    setDarkMode(checked);
   };
 
   useEffect(() => {
     const root = document.documentElement;
     root.classList.remove(colorTheme);
-    root.classList.add(theme);
+    root.classList.add(theme === undefined ? "dark" : theme);
 
-    if (theme === "dark") {
-      setDarkMode(true);
-    }
+    localStorage.setItem("theme", theme === undefined ? "dark" : theme);
+  }, [colorTheme, theme]);
 
-    localStorage.setItem("theme", theme);
-  }, [colorTheme, isDarkMode, theme]);
-
-  useEffect(() => {
-    if (width > 768 && openMenu) {
-      setOpenMenu(false);
-    }
-  }, [openMenu, width]);
+  // useEffect(() => {
+  //   if (width > 768 && openMenu) {
+  //     setOpenMenu(false);
+  //   }
+  // }, [openMenu, width]);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
 
-  const bezierEaseInOutQuart = BezierEasing(0, 0.5, 0.4, 1);
+  const bezierEaseInOutQuart = BezierEasing(0.07, 0, 0.375, 1);
 
   return (
     <React.Fragment>
       <SlideToggle
-        duration={350}
+        duration={500}
         easeCollapse={bezierEaseInOutQuart}
         easeExpand={bezierEaseInOutQuart}
         onCollapsed={({ hasReversed }) => {
           /* optional event hook */
-            hasReversed();
+          hasReversed();
         }}
+        collapsed={openMenu === false && true}
       >
         {({ toggle, setCollapsibleElement }) => (
           <div
@@ -70,7 +67,7 @@ export default function NavbarP() {
                 <div className=" hidden md:block">
                   <ul className="flex">
                     {menuList.map((menu, idx) => (
-                      <Link to={menu?.link}>
+                      <Link to={menu?.link} className="capitalize">
                         <li className="px-3" key={idx}>
                           {menu.name}
                         </li>
@@ -80,7 +77,7 @@ export default function NavbarP() {
                 </div>
                 <div className="w-7 flex justify-end">
                   <DarkModeSwitch
-                    checked={isDarkMode}
+                    checked={theme === undefined || "dark" ? true : false}
                     onChange={toggleDarkMode}
                     size={19}
                   />
@@ -100,20 +97,21 @@ export default function NavbarP() {
                 </div>
               </div>
             </div>
-
-            <div
-              className={`transition-all containerCustom my-collapsible__content `}
-              ref={setCollapsibleElement}
-            >
-              <ul className="pt-5  ">
-                {menuList.map((menu, idx) => (
-                  <Link to={menu?.link} onClick={toggleMenu}>
-                    <li key={idx} className="py-1 block w-full">
-                      {menu.name}
-                    </li>
-                  </Link>
-                ))}
-              </ul>
+            <div className={`${width > 768 && "hidden"}`}>
+              <div
+                className={`transition-all containerCustom my-collapsible__content `}
+                ref={setCollapsibleElement}
+              >
+                <ul className="pt-5 ">
+                  {menuList.map((menu, idx) => (
+                    <Link to={menu?.link} onClick={toggleMenu}>
+                      <li key={idx} className="py-1 block w-full capitalize">
+                        {menu.name}
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         )}
