@@ -20,7 +20,7 @@ export default function Layout({ children }) {
   useEffect(() => {
     const root = document.documentElement;
     root.classList.remove(colorTheme);
-    root.classList.add(theme === undefined ? "dark bg-black" : theme);
+    root.classList.add(theme === undefined ? "dark" : theme);
 
     localStorage.setItem("theme", theme === undefined ? "dark" : theme);
   }, [colorTheme, theme]);
