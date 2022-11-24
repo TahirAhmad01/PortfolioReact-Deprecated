@@ -9,6 +9,10 @@
 }
 
 @layer components {
+  body {
+    @apply bg-gray-50 dark:bg-[#111827];
+  }
+
   .customContainer {
     @apply px-28 py-20;
   }

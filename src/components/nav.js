@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SlideToggle from "react-slide-toggle";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
@@ -8,39 +8,18 @@ import useWindowDimensions from "../hook/getWindowDimensions";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
 
-export default function NavbarP() {
-  const [theme, setTheme] = useState(localStorage.theme);
+export default function NavbarP({ theme, toggleDarkMode }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [toggleEvent, setToggleEvent] = useState(0);
 
   const { width } = useWindowDimensions();
   const { scrollY } = useWindowScrollPositions();
 
-  const colorTheme = theme === "dark" ? "light" : "dark";
-
   const toggle = () => setToggleEvent(Date.now());
-
-  const toggleDarkMode = () => {
-    setTheme(colorTheme);
-  };
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
-
-  useEffect(() => {
-    const root = document.documentElement;
-    root.classList.remove(colorTheme);
-    root.classList.add(theme === undefined ? "dark" : theme);
-
-    localStorage.setItem("theme", theme === undefined ? "dark" : theme);
-  }, [colorTheme, theme]);
-
-  // useEffect(() => {
-  //   if (width > 768 && openMenu) {
-  //     toggle(false);
-  //   }
-  // }, [openMenu, width]);
 
   return (
     <React.Fragment>

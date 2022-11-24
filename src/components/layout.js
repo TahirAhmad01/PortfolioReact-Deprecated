@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import Footer from "./footer";
 import Navbar from "./nav";
 
 export default function Layout({ children }) {
+  const [theme, setTheme] = useState(localStorage.theme);
+
   const { scrollY } = useWindowScrollPositions();
+  const colorTheme = theme === "dark" ? "light" : "dark";
 
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const toggleDarkMode = () => {
+    setTheme(colorTheme);
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.remove(colorTheme);
+    root.classList.add(theme === undefined ? "dark bg-black" : theme);
+
+    localStorage.setItem("theme", theme === undefined ? "dark" : theme);
+  }, [colorTheme, theme]);
+
   return (
     <div className="relative dark:text-white bg-gray-50 dark:bg-[#111827] transition-all overflow-hidden font-nunito">
-      <Navbar />
+      <Navbar theme={theme} toggleDarkMode={toggleDarkMode} />
       {children}
       <Footer />
 

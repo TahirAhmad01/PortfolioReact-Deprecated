@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade } from "react-reveal";
+import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import Wave from "react-wavify";
 import avatar from "../../../assets/images/avater.webp";
@@ -13,15 +14,15 @@ export default function Home() {
   return (
     <div
       className={` background relative ${
-        height > 650 && width > 768 && "md:h-[100vh]"
+        height > 650 && width > 992 && "md:h-[100vh]"
       }`}
     >
       {" "}
-      <div className="h-auto pt-20 md:h-full bg-black/15 pb-6 md:pt-24  containerCustom relative z-20">
-        <div className="backdrop-blur bg-white/40 dark:bg-black/40 rounded-2xl h-full w-full relative overflow-hidden">
+      <div className="h-auto pt-24 md:h-full bg-black/15 pb-8 md:pt-24 containerCustom relative z-20">
+        <div className="backdrop-blur-xl bg-white/40 dark:bg-[#0b1327]/60 rounded-2xl h-full w-full relative overflow-hidden">
           <div
             className={` flex items-center justify-center flex-col overflow-hidden md:px-28 h-full w-full relative  z-20 py-16 pb-24 mx:py-0  ${
-              height > 650 && width > 768 && "pb-16"
+              height > 650 && width > 992 && "pb-16"
             }`}
           >
             <div className="h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
@@ -82,12 +83,14 @@ export default function Home() {
               </a>
             </div>
             <div className="flex mt-5">
-              <button
-                type="button"
-                className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md:px-9 py-3.5 text-center mr-2 mb-2 text-white   "
-              >
-                Get in touch
-              </button>
+              <Link to="/contact">
+                <button
+                  type="button"
+                  className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md:px-9 py-3.5 text-center mr-2 mb-2 text-white   "
+                >
+                  Get in touch
+                </button>
+              </Link>
 
               <button
                 type="button"
