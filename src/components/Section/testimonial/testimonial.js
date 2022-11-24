@@ -20,10 +20,10 @@ export default function Testimonial() {
       400: {
         items: 1,
       },
-      600: {
+      768: {
         items: 2,
       },
-      700: {
+      992: {
         items: 3,
       },
     },

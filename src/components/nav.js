@@ -8,7 +8,7 @@ import useWindowDimensions from "../hook/getWindowDimensions";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
 
-export default function NavbarP({ theme, toggleDarkMode }) {
+export default function Navbar({ theme, toggleDarkMode }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [toggleEvent, setToggleEvent] = useState(0);
 
@@ -30,23 +30,28 @@ export default function NavbarP({ theme, toggleDarkMode }) {
       >
         <div className="containerCustom flex items-center justify-between h-full">
           <div>
-            <h4 className="flex items-center text-xl">
-              <div className="h-9 w-9 overflow-hidden rounded-full bg-transparent">
-                <img src={avatar} alt="avatar" />
-              </div>
-              <div className="ml-3">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-extrabold text-2xl">
-                  Tahir Ahmad
-                </span>
-              </div>
-            </h4>
+            <Link to="/">
+              <h4 className="flex items-center text-xl">
+                <div className="h-9 w-9 overflow-hidden rounded-full bg-transparent">
+                  <img src={avatar} alt="avatar" />
+                </div>
+                <div className="ml-3">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-extrabold text-2xl">
+                    Tahir Ahmad
+                  </span>
+                </div>
+              </h4>
+            </Link>
           </div>
           <div className="flex items-center">
             <div className=" hidden md:block">
               <ul className="flex">
                 {menuList.map((menu, idx) => (
                   <Link to={menu?.link} className="capitalize">
-                    <li className="px-3" key={idx}>
+                    <li
+                      className="px-3 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-medium"
+                      key={idx}
+                    >
                       {menu.name}
                     </li>
                   </Link>

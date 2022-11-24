@@ -22,7 +22,7 @@
   }
 
   .customButton {
-    @apply bg-white dark:bg-[#232323]  h-[34px] w-[34px] md:h-[40px] md:w-[40px] text-[18px] md:text-[20px] m-[3px] md:m-[5px] hover:text-white;
+    @apply bg-white dark:bg-[#232323]  h-[34px] w-[34px] md:h-[40px] md:w-[40px] text-[18px] md:text-[20px] m-[3px] md:m-[5px] hover:text-white rounded-xl;
   }
 
   .containerCustom {
@@ -58,7 +58,6 @@
   display: inline-flex;
   justify-content: center;
   text-decoration: none;
-  border-radius: 50%;
   transition: all 0.3s;
 }
 

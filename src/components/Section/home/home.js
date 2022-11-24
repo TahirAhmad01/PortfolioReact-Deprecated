@@ -9,8 +9,6 @@ import useWindowDimensions from "../../../hook/getWindowDimensions";
 export default function Home() {
   const { height, width } = useWindowDimensions();
 
-  console.log(height);
-
   return (
     <div
       className={` background relative ${
@@ -68,7 +66,7 @@ export default function Home() {
               <a
                 href="https://www.instagram.com/tahir_ahmad01"
                 target="_blank"
-                className="hover:bg-[#e1306c] customButton"
+                className="hover:instagram customButton"
                 rel="noreferrer"
               >
                 <i className="fab fa-instagram"></i>

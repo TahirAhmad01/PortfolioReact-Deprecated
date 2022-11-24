@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer(props) {
   return (
     <>
-      <footer className=" bg-white rounded-sm shadow dark:bg-gray-800 ">
-        <div className="md:flex md:items-center md:justify-between p-4 md:p-6 containerCustom">
+      <footer className=" bg-gray-100 rounded-sm shadow dark:bg-gray-800 ">
+        <div className="md:flex md:items-center md:justify-between text-center p-4 md:p-6 containerCustom">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
             <a href="https://Qubartech.com/" className="hover:underline">
@@ -12,28 +12,48 @@ export default function Footer(props) {
             </a>
             . All Rights Reserved.
           </span>
-          <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-            <li>
-              <a href="/#" className="mr-4 hover:underline md:mr-6 ">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="mr-4 hover:underline md:mr-6">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="mr-4 hover:underline md:mr-6">
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="hover:underline">
-                Contact
-              </a>
-            </li>
-          </ul>
+          <div className="icons text-gray-600 dark:text-white/60 flex justify-center flex-wrap mt-2 md:mt-0">
+            <a
+              href="https://www.facebook.com/TahirAhmad01/"
+              target="_blank"
+              className="hover:bg-[#4267b2] customButton"
+              rel="noreferrer"
+            >
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/tahirahmad01/"
+              target="_blank"
+              className="hover:bg-[#0A66C2] customButton"
+              rel="noreferrer"
+            >
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://twitter.com/tahir_ahmad01"
+              target="_blank"
+              className="hover:bg-[#1da1f2] customButton"
+              rel="noreferrer"
+            >
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/tahir_ahmad01"
+              target="_blank"
+              className="hover:instagram customButton"
+              rel="noreferrer"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/TahirAhmad01"
+              target="_blank"
+              className="hover:bg-[#171515]  customButton "
+              rel="noreferrer"
+            >
+              <i className="fab fa-github "></i>
+            </a>
+          </div>
         </div>
       </footer>
     </>

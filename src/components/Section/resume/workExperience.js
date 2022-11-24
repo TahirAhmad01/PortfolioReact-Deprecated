@@ -23,9 +23,14 @@ export default function WorkExperience() {
                     </div>
                   </Fade>
                 </div>
+                <div className="text-gray-500 dark:text-gray-200 text-xs md:hidden block">
+                  <span>19 Dec,2019</span>
+                  <span> - </span>
+                  <span>19 Dec,2021</span>
+                </div>
               </div>
 
-              <div className="text-gray-500 dark:text-gray-200 text-xs">
+              <div className="text-gray-500 dark:text-gray-200 text-xs hidden md:block">
                 <span>19 Dec,2019</span>
                 <span> - </span>
                 <span>19 Dec,2021</span>
