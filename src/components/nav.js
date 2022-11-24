@@ -1,9 +1,9 @@
-import BezierEasing from "bezier-easing";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SlideToggle from "react-slide-toggle";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import "../assets/css/mobileMenu.css";
+import avatar from "../assets/images/avater.webp";
 import useWindowDimensions from "../hook/getWindowDimensions";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
@@ -41,14 +41,14 @@ export default function NavbarP() {
     setOpenMenu(!openMenu);
   };
 
-  const bezierEaseInOutQuart = BezierEasing(0.07, 0, 0.375, 1);
+  // const bezierEaseInOutQuart = BezierEasing(0.07, 0, 0.375, 1);
 
   return (
     <React.Fragment>
       <SlideToggle
         duration={500}
-        easeCollapse={bezierEaseInOutQuart}
-        easeExpand={bezierEaseInOutQuart}
+        // easeCollapse={bezierEaseInOutQuart}
+        // easeExpand={bezierEaseInOutQuart}
         onCollapsed={({ hasReversed }) => {
           /* optional event hook */
           hasReversed();
@@ -62,7 +62,14 @@ export default function NavbarP() {
             }`}
           >
             <div className="containerCustom flex items-center justify-between h-full">
-              <div>logo</div>
+              <div>
+                <h4 className="flex items-center text-xl">
+                  <div className="h-9 w-9 overflow-hidden rounded-full bg-white">
+                    <img src={avatar} alt="avatar" />
+                  </div>
+                  <div className="ml-3">Tahir Ahmad</div>
+                </h4>
+              </div>
               <div className="flex items-center">
                 <div className=" hidden md:block">
                   <ul className="flex">
@@ -77,7 +84,13 @@ export default function NavbarP() {
                 </div>
                 <div className="w-7 flex justify-end">
                   <DarkModeSwitch
-                    checked={theme === undefined || "dark" ? true : false}
+                    checked={
+                      theme === undefined
+                        ? true
+                        : theme === "dark"
+                        ? true
+                        : false
+                    }
                     onChange={toggleDarkMode}
                     size={19}
                   />
