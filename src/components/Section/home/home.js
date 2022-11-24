@@ -75,7 +75,7 @@ export default function Home() {
               <a
                 href="https://github.com/TahirAhmad01"
                 target="_blank"
-                className="hover:bg-[#333333]  customButton "
+                className="hover:bg-[#171515]  customButton "
                 rel="noreferrer"
               >
                 <i className="fab fa-github "></i>
