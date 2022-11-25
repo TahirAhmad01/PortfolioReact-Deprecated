@@ -16,7 +16,11 @@ const menuList = [
     link: "/projects",
   },
   {
-    name: "contact",
+    name: "Experience",
+    link: "/experience",
+  },
+  {
+    name: "Contact",
     link: "/contact",
   },
 ];
