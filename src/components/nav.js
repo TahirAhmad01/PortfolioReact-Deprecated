@@ -47,11 +47,8 @@ export default function Navbar({ theme, toggleDarkMode }) {
             <div className=" hidden md:block">
               <ul className="flex">
                 {menuList.map((menu, idx) => (
-                  <Link to={menu?.link} className="capitalize">
-                    <li
-                      className="px-3 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-medium"
-                      key={idx}
-                    >
+                  <Link to={menu?.link} className="capitalize" key={idx}>
+                    <li className="px-3 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-medium">
                       {menu.name}
                     </li>
                   </Link>
@@ -97,6 +94,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
                         toggle();
                         toggleMenu();
                       }}
+                      key={idx}
                     >
                       <li key={idx} className="py-1 block w-full capitalize">
                         {menu.name}

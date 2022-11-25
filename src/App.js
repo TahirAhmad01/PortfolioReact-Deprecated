@@ -10,11 +10,6 @@ import Projects from "./pages/projects";
 import Skill from "./pages/skill";
 
 function App() {
-  if (window.performance) {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } else {
-    alert("hello");
-  }
   return (
     <BrowserRouter>
       <Layout>
