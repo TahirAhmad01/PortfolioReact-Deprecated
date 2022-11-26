@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SlideToggle from "react-slide-toggle";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import "../assets/css/mobileMenu.css";
@@ -20,6 +20,9 @@ export default function Navbar({ theme, toggleDarkMode }) {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
+
+  const location = useLocation();
+  const path = location.pathname;
 
   return (
     <React.Fragment>
@@ -48,7 +51,13 @@ export default function Navbar({ theme, toggleDarkMode }) {
               <ul className="flex">
                 {menuList.map((menu, idx) => (
                   <Link to={menu?.link} className="capitalize" key={idx}>
-                    <li className="px-3 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-medium">
+                    <li
+                      className={`px-3 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-medium ${
+                        path === menu?.link || path === menu?.link + "/"
+                          ? "text-transparent font-semibold"
+                          : ""
+                      }`}
+                    >
                       {menu.name}
                     </li>
                   </Link>
