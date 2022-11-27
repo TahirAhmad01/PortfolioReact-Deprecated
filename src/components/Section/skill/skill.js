@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../title";
 import ProgressBar from "./progressBar";
-import { data } from "./skillData";
+import { data } from "./../../../utils/skillData";
 
 export default function Skill() {
   return (

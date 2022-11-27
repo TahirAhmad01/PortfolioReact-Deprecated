@@ -21,7 +21,7 @@ export default function Feedback({ star, name, description }) {
               />
 
               <div className="ml-4">
-                <div className="flex justify-center gap-0.5 text-green-500">
+                <div className="flex justify-start gap-0.5 text-green-500">
                   {rating}
                 </div>
 
