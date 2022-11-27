@@ -5,6 +5,7 @@ import Typed from "react-typed";
 import Wave from "react-wavify";
 import avatar from "../../../assets/images/avater.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
+import Button from "./button";
 
 export default function Home() {
   const { height, width } = useWindowDimensions();
@@ -87,20 +88,10 @@ export default function Home() {
             </div>
             <div className="flex mt-5">
               <Link to="/contact">
-                <button
-                  type="button"
-                  className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md:px-9 py-3.5 text-center mr-2 mb-2 text-white   "
-                >
-                  Get in touch
-                </button>
+                <Button name="Get in touch" />
               </Link>
 
-              <button
-                type="button"
-                className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md-px-9 py-3.5 text-center mr-2 mb-2 text-white   "
-              >
-                Download CV
-              </button>
+              <Button name="Download CV" />
             </div>
           </div>
           <Wave
