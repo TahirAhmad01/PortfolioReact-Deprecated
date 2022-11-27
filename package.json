@@ -2,7 +2,7 @@
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://TahirAhmad01.github.io/Portfolio-react",
+  "homepage": "http://TahirAhmad01.github.io/Portfolio-react/",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",

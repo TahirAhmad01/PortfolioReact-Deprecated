@@ -1,6 +1,7 @@
 import React from "react";
 import { Fade, Zoom } from "react-reveal";
 import Icon from "../../../assets/images/work.gif";
+import useWindowDimensions from "../../../hook/getWindowDimensions";
 
 export default function WorkExperience({
   workTitle,
@@ -10,12 +11,14 @@ export default function WorkExperience({
   position,
   location,
 }) {
+  const { width } = useWindowDimensions();
+
   return (
     <>
       <div className="mb-3 p-6 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden flex items-center">
         <div className=" mr-6 hidden lg:block overflow-hidden">
           <Zoom>
-            <img src={Icon} alt="work_ico" className="w-56" />
+            <img src={Icon} alt="work_ico" className="w-64" />
           </Zoom>
         </div>
         <div className="w-full">
@@ -42,19 +45,27 @@ export default function WorkExperience({
                   </div>
                 </div>
 
-                <div className="text-gray-500 dark:text-gray-200 text-xs flex items-center mt-1 md:mt-0">
-                  <div className="mr-1">
-                    <i className="fa-regular fa-calendar-days text-xs"></i>
-                  </div>
-                  <div>{startDate}</div>
-                  <div className="mx-1"> - </div>
-                  <div>{endDate}</div>
+                <div className="text-gray-500 dark:text-gray-200 text-xs mt-1 md:mt-0">
+                  <Fade
+                    left={width < 768 ? true : false}
+                    right={width > 768 ? true : false}
+                    duration={1300}
+                  >
+                    <div className=" flex items-center ">
+                      <div className="mr-1">
+                        <i className="fa-regular fa-calendar-days text-xs"></i>
+                      </div>
+                      <div>{startDate}</div>
+                      <div className="mx-1"> - </div>
+                      <div>{endDate}</div>
+                    </div>
+                  </Fade>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <p className="mt-3 text-sm">
+            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
               <Fade up>{description}</Fade>
             </p>
           </div>

@@ -12,8 +12,20 @@ export const data = [
     progress: 85,
   },
   {
+    name: "JQuery",
+    progress: 85,
+  },
+  {
+    name: "Sass",
+    progress: 75,
+  },
+  {
+    name: "Materialize",
+    progress: 65,
+  },
+  {
     name: "Bootstrap",
-    progress: 70,
+    progress: 80,
   },
   {
     name: "Tailwind",
@@ -21,6 +33,34 @@ export const data = [
   },
   {
     name: "React",
+    progress: 85,
+  },
+  {
+    name: "Next",
+    progress: 65,
+  },
+  {
+    name: "git",
+    progress: 85,
+  },
+  {
+    name: "github",
+    progress: 85,
+  },
+  {
+    name: "Figme",
     progress: 75,
+  },
+  {
+    name: "Adobe xd",
+    progress: 55,
+  },
+  {
+    name: "Adobe Photoshop",
+    progress: 35,
+  },
+  {
+    name: "Adobe Illustrator",
+    progress: 25,
   },
 ];

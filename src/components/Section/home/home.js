@@ -32,7 +32,12 @@ export default function Home() {
               </Fade>
             </h2>{" "}
             <Typed
-              strings={["Web developer", "Web designer", "ui/ux designer"]}
+              strings={[
+                "Web developer",
+                "Web designer",
+                "React Developer",
+                "UI/UX designer",
+              ]}
               typeSpeed={90}
               backSpeed={80}
               loop

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import buttonList from "../../../utils/buttonList";
 import projectList from "../../../utils/projectList";
-import buttonList from "./buttonList";
 
 export default function ProjectButton({ setItem, items }) {
   const [activeBtn, setActiveBtn] = useState("all");
