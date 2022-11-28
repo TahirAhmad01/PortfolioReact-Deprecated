@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Projects({ items }) {
   return (
@@ -18,9 +20,10 @@ export default function Projects({ items }) {
                 transition={{ duration: 0.5 }}
               >
                 <div className="relative projectBtn max-h-60 md:h-52 lg:h-[10.7rem] object-contain  overflow-hidden mb-2 ">
-                  <img
+                  <LazyLoadImage
                     src={item.image}
                     alt={item.name}
+                    height="100%"
                     className="object-cover min-h-full"
                   />
                   <div className="absolute bg-white/80 backdrop-blur  h-full w-full -bottom-full left-0 z-30 flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black">
