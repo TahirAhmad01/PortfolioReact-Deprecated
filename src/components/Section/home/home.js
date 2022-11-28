@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
 import Typed from "react-typed";
@@ -12,7 +13,7 @@ export default function Home() {
 
   return (
     <div
-      className={` background relative ${
+      className={`background relative ${
         height > 650 && width > 992 && "md:h-[100vh]"
       }`}
     >
@@ -25,7 +26,7 @@ export default function Home() {
             }`}
           >
             <div className="h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
-              <img src={avatar} alt="avatar" />
+              <LazyLoadImage src={avatar} alt="avatar" />
             </div>
             <h2 className="text-3xl md:text-4xl font-medium pb-4 pt-2 ">
               <Fade up cascade>

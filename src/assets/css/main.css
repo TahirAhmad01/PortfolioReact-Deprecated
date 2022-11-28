@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +19,7 @@
   }
 
   .background {
-    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover;
+    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover bg-cyan-200 dark:bg-sky-700;
   }
 
   .customButton {
@@ -30,6 +31,10 @@
     padding-left: 15px !important;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .projectBtn:hover div {
+    bottom: 0% !important;
   }
 
   @media (min-width: 768px) {
@@ -47,28 +52,16 @@
       width: 1170px;
     }
   }
+
+  @media (min-width: 2000px) {
+    .containerCustom {
+      width: 1770px;
+    }
+  }
 }
 
 .owl-carousel .owl-item img {
   width: auto !important;
-}
-
-.icons a {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.icons a:hover:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 50%;
 }
 
 .icons a i {
@@ -81,8 +74,4 @@
 
 .icons a:hover i {
   transform: scale(0.9);
-}
-
-.projectBtn:hover .slide-up {
-  bottom: 0;
 }
