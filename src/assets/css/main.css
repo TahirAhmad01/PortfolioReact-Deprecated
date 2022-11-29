@@ -19,7 +19,7 @@
   }
 
   .background {
-    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover bg-cyan-200 dark:bg-sky-700;
+    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover ;
   }
 
   .customButton {

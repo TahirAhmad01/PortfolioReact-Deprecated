@@ -54,9 +54,7 @@ module.exports = {
         },
       });
       addUtilities({
-        ".containerCustom": {
-          //
-        },
+        ".containerCustom": {},
 
         ".gap": {
           paddingTop: "55px",
@@ -65,6 +63,15 @@ module.exports = {
         ".instagram": {
           background:
             "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+        },
+        ".lightBg": {
+          backgroundImage:
+            "radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,229,168,1) 0%, rgba(251,174,222,1) 100.7% )",
+        },
+
+        ".darkBg": {
+          backgroundImage:
+            " radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,130,159,1) 0%, rgba(103,56,96,1) 90% )",
         },
       });
     }),

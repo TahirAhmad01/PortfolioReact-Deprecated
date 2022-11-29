@@ -1,12 +1,12 @@
 import React from "react";
 import { Fade } from "react-reveal";
 
-export default function ProgressBar({ name, progress, color }) {
+export default function ProgressBar({ name, progress, color, ...rest }) {
   //   useCountUp({ ref: "counter", end: 1234567 });
 
   return (
     <React.Fragment>
-      <div className="mb-4 w-full md:w-1/2 px-2">
+      <div className="mb-4 w-full md:w-1/2 px-2" {...rest}>
         <div className="flex justify-between mb-1">
           <span
             className={`text-base font-semibold text-black dark:text-white uppercase`}

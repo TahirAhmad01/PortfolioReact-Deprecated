@@ -65,9 +65,11 @@ export default function WorkExperience({
             </div>
           </div>
           <div>
-            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
-              <Fade up>{description}</Fade>
-            </p>
+            <Fade up>
+              <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
+                {description}
+              </p>
+            </Fade>
           </div>
         </div>
       </div>

@@ -12,9 +12,11 @@ export default function Project() {
     <div className="containerCustom gap">
       <Title title="projects" />
       <ProjectButton setItem={setItems} items={items} />
-      <AnimatePresence>
-        <Projects items={items} />
-      </AnimatePresence>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 columns-1 gap-1 justify-items-center">
+        <AnimatePresence>
+          <Projects items={items} />
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

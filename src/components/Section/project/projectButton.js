@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import buttonList from "../../../utils/buttonList";
 import projectList from "../../../utils/projectList";
 
-export default function ProjectButton({ setItem, items }) {
+export default function ProjectButton({ setItem }) {
   const [activeBtn, setActiveBtn] = useState("all");
   const filterItem = (category) => {
     setActiveBtn(category);

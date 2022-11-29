@@ -1,7 +1,7 @@
 const workList = [
   {
     id: 1,
-    workTitle: "Front End Web Developer",
+    workTitle: "Web designer",
     startDate: "12-06-2020",
     endDate: "12-06-2020",
     position: "web developer",
