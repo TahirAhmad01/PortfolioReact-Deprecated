@@ -3,6 +3,7 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import png from "../../../assets/images/blur.webp";
 
 export default function Projects({ items }) {
   return (
@@ -18,13 +19,15 @@ export default function Projects({ items }) {
             transition={{ duration: 0.5 }}
           >
             <div
-              className="relative projectBtn max-h-60 md:h-52 lg:h-56 object-contain  overflow-hidden"
+              className="relative projectBtn max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden"
               key={idx}
             >
               <LazyLoadImage
                 src={item.image}
+                placeholderSrc={png}
                 alt={item.name}
                 height="100%"
+                width="100%"
                 className="object-cover min-h-full"
                 key={idx}
               />
