@@ -95,7 +95,7 @@ export default function ContactMe() {
             <div className="text-center mt-4">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-lg text-sm px-7 py-3.5 text-center mr-2 mb-2 text-white   "
+                className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center mr-2 mb-2 text-white transition-all"
                 name="message"
               >
                 Send Message

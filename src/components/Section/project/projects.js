@@ -3,12 +3,23 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useLocation } from "react-router-dom";
 import png from "../../../assets/images/blur.webp";
 
 export default function Projects({ items }) {
+  const location = useLocation();
+  const path = location.pathname;
+
+  let slice;
+  if (path === "/" && items.length > 9) {
+    slice = items.slice(items.length - 9, items.length);
+  } else {
+    slice = items;
+  }
+
   return (
     <>
-      {items.map((item, idx) => (
+      {slice.map((item, idx) => (
         <Fade key={item.id}>
           <motion.div
             key={item.id}
