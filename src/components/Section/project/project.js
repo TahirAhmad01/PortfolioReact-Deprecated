@@ -1,14 +1,15 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
+import { Fade } from "react-reveal";
 import { Link, useLocation } from "react-router-dom";
 import projectList from "../../../utils/projectList";
 import Title from "../title";
 import ProjectButton from "./projectButton";
 import Projects from "./projects";
-import { Fade } from "react-reveal";
 
 export default function Project() {
   const [items, setItems] = useState(projectList);
+
   const location = useLocation();
   const path = location.pathname;
 

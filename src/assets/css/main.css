@@ -19,11 +19,19 @@
   }
 
   .background {
-    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover ;
+    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover;
   }
 
   .customButton {
-    @apply bg-white dark:bg-[#232323]  h-[34px] w-[34px] md:h-[40px] md:w-[40px] text-[18px] md:text-[20px] m-[3px] md:m-[5px] hover:text-white rounded-xl;
+    @apply bg-white dark:bg-[#464f56]  h-[34px] w-[34px] md:h-[40px] md:w-[40px] text-[18px] md:text-[20px] m-[3px] md:m-[5px] hover:text-white rounded-xl dark:text-white;
+  }
+
+  .icons a i {
+    @apply w-full h-full flex justify-center items-center;
+  }
+
+  .projectBtn:hover div {
+    bottom: 0% !important;
   }
 
   .containerCustom {
@@ -31,10 +39,6 @@
     padding-left: 15px !important;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .projectBtn:hover div {
-    bottom: 0% !important;
   }
 
   @media (min-width: 768px) {
@@ -62,16 +66,4 @@
 
 .owl-carousel .owl-item img {
   width: auto !important;
-}
-
-.icons a i {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icons a:hover i {
-  transform: scale(0.9);
 }

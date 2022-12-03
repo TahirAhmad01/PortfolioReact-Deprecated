@@ -9,7 +9,7 @@ export default function Title({ title, titleDes, className }) {
             {title || "Title"}
           </span>
         </h1>
-        <span className="text-sm text-gray-600">
+        <span className="text-sm text-gray-600 dark:text-gray-400">
           {titleDes || "Lorem ipsum, dolor sit amet consectetur"}
         </span>
       </div>

@@ -1,12 +1,20 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useLocation } from "react-router-dom";
 import png from "../../../assets/images/blur.webp";
+import ProjectModal from "./projectModal";
 
 export default function Projects({ items }) {
+  const [open, setOpen] = useState(false);
+  const [projectId, setProjectId] = useState("");
+  const handleOpen = (id) => {
+    setOpen(true);
+    setProjectId(id);
+  };
+
   const location = useLocation();
   const path = location.pathname;
 
@@ -32,8 +40,9 @@ export default function Projects({ items }) {
               transition={{ duration: 0.5 }}
             >
               <div
-                className="relative projectBtn max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden"
+                className="relative projectBtn max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden hover:cursor-pointer"
                 key={idx}
+                onClick={() => handleOpen(item.id)}
               >
                 <LazyLoadImage
                   src={item.image}
@@ -62,6 +71,13 @@ export default function Projects({ items }) {
             </motion.div>
           </Fade>
         ))}
+
+      <ProjectModal
+        open={open}
+        handleOpen={handleOpen}
+        setOpen={setOpen}
+        projectId={projectId}
+      />
     </>
   );
 }
