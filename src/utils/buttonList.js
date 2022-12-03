@@ -5,24 +5,24 @@ const buttonList = [
     category: "all",
   },
   {
-    id: 1,
+    id: 2,
     name: "js",
     category: "js",
   },
   {
-    id: 1,
+    id: 3,
     name: "react",
     category: "react",
   },
   {
-    id: 1,
+    id: 4,
     name: "next",
     category: "next",
   },
   {
-    id: 1,
-    name: "jquery",
-    category: "jquery",
+    id: 5,
+    name: "redux",
+    category: "redux",
   },
 ];
 

@@ -6,23 +6,25 @@ import WorkExperience from "./workExperience";
 export default function Resume() {
   let content;
 
-  content = workList.map((work, idx) => {
-    const { description, endDate, startDate, workTitle, position, location } =
-      work || {};
+  content = workList
+    .sort((b, a) => a.id - b.id)
+    .map((work, idx) => {
+      const { description, endDate, startDate, workTitle, position, location } =
+        work || {};
 
-    return (
-      <span key={idx}>
-        <WorkExperience
-          workTitle={workTitle}
-          startDate={startDate}
-          endDate={endDate}
-          description={description}
-          position={position}
-          location={location}
-        />
-      </span>
-    );
-  });
+      return (
+        <span key={idx}>
+          <WorkExperience
+            workTitle={workTitle}
+            startDate={startDate}
+            endDate={endDate}
+            description={description}
+            position={position}
+            location={location}
+          />
+        </span>
+      );
+    });
 
   return (
     <>
