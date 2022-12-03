@@ -30,6 +30,7 @@
     "react-typed": "^1.2.0",
     "react-wavify": "^1.6.3",
     "sweetalert": "^2.1.2",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

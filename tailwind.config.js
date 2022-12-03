@@ -29,6 +29,7 @@ module.exports = {
     require("flowbite/plugin"),
     require("tailwindcss"),
     require("autoprefixer"),
+    require('tailwind-scrollbar-hide'),
 
     plugin(function ({ addBase, addComponents, addUtilities, theme }) {
       addBase({
