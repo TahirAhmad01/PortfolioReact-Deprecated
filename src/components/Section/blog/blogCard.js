@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BlogCard(props) {
+export default function BlogCard() {
   return (
     <>
       <div className="w-full my-3 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">

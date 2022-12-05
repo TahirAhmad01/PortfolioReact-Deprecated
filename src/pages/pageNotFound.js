@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
+import PageLayout from "../components/pageLayout";
 
 function PageNotFound() {
   return (
-    <div className="pt-12 md:pt-14">
-      <section className="flex items-center h-full p-16 dark:bg-gray-900 dark:text-gray-100">
+    <PageLayout>
+      <section className="flex items-center h-full p-16 dark:bg-gray-900 dark:text-gray-100 md:h-[calc(100vh-8rem)]">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
           <div className="max-w-lg text-center">
             <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-600">
@@ -17,16 +19,18 @@ function PageNotFound() {
               But dont worry, you can find plenty of other things on our
               homepage.
             </p>
-            <button
-              type="button"
-              className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md:px-9 py-3.5 text-center mr-2 mb-2 text-white   "
-            >
-              Back to home
-            </button>
+            <Link to="/">
+              <button
+                type="button"
+                className=" bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-5 md:px-9 py-3.5 text-center mr-2 mb-2 text-white   "
+              >
+                Back to home
+              </button>
+            </Link>
           </div>
         </div>
       </section>
-    </div>
+    </PageLayout>
   );
 }
 

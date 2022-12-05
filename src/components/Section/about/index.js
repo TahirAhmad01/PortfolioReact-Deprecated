@@ -4,7 +4,7 @@ import picture from "../../.../../../assets/images/myPic.jpg";
 import Title from "../title";
 import Info from "./info";
 
-export default function About(props) {
+export default function About() {
   return (
     <div className=" flex items-center flex-wrap relative">
       {/* <div className="w-full lg:w-1/2 ">

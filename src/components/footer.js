@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <>
       <footer className=" bg-gray-100 rounded-sm shadow dark:bg-gray-800 ">
@@ -48,7 +48,7 @@ export default function Footer(props) {
             <a
               href="https://github.com/TahirAhmad01"
               target="_blank"
-              className="hover:bg-[#171515]  customButton "
+              className="hover:bg-[#171515] customButton "
               rel="noreferrer"
             >
               <i className="fab fa-github "></i>

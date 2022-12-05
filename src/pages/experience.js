@@ -1,10 +1,11 @@
 import React from "react";
-import Resume from "../components/Section/resume/resume";
+import PageLayout from "../components/pageLayout";
+import Resume from "../components/Section/resume";
 
 export default function Experience() {
   return (
-    <div className="pt-12 md:pt-14">
+    <PageLayout>
       <Resume />
-    </div>
+    </PageLayout>
   );
 }

@@ -1,17 +1,17 @@
 import React from "react";
-import About from "../components/Section/about/about";
-import Blog from "../components/Section/blog/blog";
-import ContactMe from "../components/Section/contactMe/contactMe";
-import Index from "../components/Section/home/home";
-import Project from "../components/Section/project/project";
-import Resume from "../components/Section/resume/resume";
-import Skill from "../components/Section/skill/skill";
-import Testimonial from "../components/Section/testimonial/testimonial";
+import About from "../components/Section/about";
+import Blog from "../components/Section/blog";
+import ContactMe from "../components/Section/contactMe";
+import TopSec from "../components/Section/home";
+import Project from "../components/Section/project";
+import Resume from "../components/Section/resume";
+import Skill from "../components/Section/skill";
+import Testimonial from "../components/Section/testimonial";
 
-export default function Home(props) {
+export default function Home() {
   return (
     <>
-      <Index />
+      <TopSec />
       <About />
       <Skill />
       <Project />

@@ -1,10 +1,11 @@
 import React from "react";
-import Skills from "../components/Section/skill/skill";
+import PageLayout from "../components/pageLayout";
+import Skills from "../components/Section/skill";
 
-export default function Skill(props) {
+export default function Skill() {
   return (
-    <div className="pt-12 md:pt-14">
+    <PageLayout>
       <Skills />
-    </div>
+    </PageLayout>
   );
 }

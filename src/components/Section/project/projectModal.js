@@ -7,7 +7,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  maxHeight: "80vh",
+  maxHeight: "90vh",
   border: "none",
   boxShadow: 90,
   p: 1,
@@ -27,7 +27,7 @@ function ProjectModal({ setOpen, open, projectId }) {
     return (
       <>
         <div
-          className="min-h-[20vh] max-h-[45vh] overflow-hidden scrollbar-hide rounded-lg"
+          className="min-h-[5vh] max-h-[42vh] overflow-hidden scrollbar-hide rounded-lg"
           key={idx}
         >
           <img src={image} alt={name} />
@@ -35,7 +35,7 @@ function ProjectModal({ setOpen, open, projectId }) {
         <div className="py-3 px-3">
           <Typography
             id="modal-modal-title"
-            variant="h6"
+            variant="h5"
             component="h2"
             className="capitalize font-medium"
           >
@@ -47,9 +47,16 @@ function ProjectModal({ setOpen, open, projectId }) {
               <span key={idx}>{(idx ? ", " : "") + cat}</span>
             ))}
           </div>
-          {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography> */}
+          <div className="text-sm text-gray-700 dark:text-gray-400 mt-2 mb-5">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Reprehenderit maiores quasi quod quidem blanditiis culpa, deserunt
+            atque tempore ullam ratione eos quaerat, odit perferendis illum
+            placeat facere recusandae dolore asperiores. Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Reprehenderit maiores quasi quod
+            quidem blanditiis culpa, deserunt atque tempore ullam ratione eos
+            quaerat, odit perferendis illum placeat facere recusandae dolore
+            asperiores.
+          </div>
 
           {(link || source) && (
             <div className="mt-3">

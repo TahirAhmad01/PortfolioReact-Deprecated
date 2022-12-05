@@ -1,12 +1,13 @@
 import React from "react";
-import ContactMe from "../components/Section/contactMe/contactMe";
+import PageLayout from "../components/pageLayout";
+import ContactMe from "../components/Section/contactMe";
 
 export default function Contact() {
   return (
     <>
-      <div className="pt-12 md:pt-14">
-        <ContactMe />
-      </div>
+      <PageLayout>
+          <ContactMe />
+      </PageLayout>
     </>
   );
 }

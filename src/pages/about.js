@@ -1,12 +1,13 @@
 import React from "react";
-import AboutMe from "../components/Section/about/about";
+import PageLayout from "../components/pageLayout";
+import AboutMe from "../components/Section/about";
 
-export default function About(props) {
+export default function About() {
   return (
     <>
-      <div className="pt-12 md:pt-14">
+      <PageLayout>
         <AboutMe />
-      </div>
+      </PageLayout>
     </>
   );
 }

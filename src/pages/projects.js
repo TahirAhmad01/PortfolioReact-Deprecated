@@ -1,12 +1,13 @@
 import React from "react";
-import Project from "../components/Section/project/project";
+import PageLayout from "../components/pageLayout";
+import Project from "../components/Section/project";
 
-export default function Projects(props) {
+export default function Projects() {
   return (
     <>
-      <div className="pt-12 md:pt-14">
+      <PageLayout>
         <Project />
-      </div>
+      </PageLayout>
     </>
   );
 }
