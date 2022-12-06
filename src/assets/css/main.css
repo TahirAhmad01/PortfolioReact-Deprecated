@@ -67,3 +67,9 @@
 .owl-carousel .owl-item img {
   width: auto !important;
 }
+
+.HorizontalScrollContainer_defaultRightArrow,
+.HorizontalScrollContainer_defaultLeftArrow {
+  border: solid #9a9a9a !important;
+  border-width: 0 3px 3px 0 !important;
+}

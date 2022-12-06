@@ -11,18 +11,23 @@ const buttonList = [
   },
   {
     id: 3,
-    name: "react",
-    category: "react",
+    name: "jquery",
+    category: "jquery",
   },
   {
     id: 4,
-    name: "next",
-    category: "next",
+    name: "react",
+    category: "react",
   },
   {
     id: 5,
     name: "redux",
     category: "redux",
+  },
+  {
+    id: 6,
+    name: "next",
+    category: "next",
   },
 ];
 

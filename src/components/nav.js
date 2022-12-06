@@ -105,7 +105,14 @@ export default function Navbar({ theme, toggleDarkMode }) {
                       }}
                       key={idx}
                     >
-                      <li key={idx} className="py-1 block w-full capitalize">
+                      <li
+                        key={idx}
+                        className={`py-1 px-4 block w-full capitalize rounded-lg overflow-hidden ${
+                          path === menu?.link || path === menu?.link + "/"
+                            ? "bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white"
+                            : "active:bg-gray-300 dark:active:bg-gray-600"
+                        }`}
+                      >
                         {menu.name}
                       </li>
                     </Link>
