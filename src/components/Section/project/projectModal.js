@@ -51,11 +51,7 @@ function ProjectModal({ setOpen, open, projectId }) {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Reprehenderit maiores quasi quod quidem blanditiis culpa, deserunt
             atque tempore ullam ratione eos quaerat, odit perferendis illum
-            placeat facere recusandae dolore asperiores. Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Reprehenderit maiores quasi quod
-            quidem blanditiis culpa, deserunt atque tempore ullam ratione eos
-            quaerat, odit perferendis illum placeat facere recusandae dolore
-            asperiores.
+            placeat facere recusandae dolore asperiores.
           </div>
 
           {(link || source) && (
