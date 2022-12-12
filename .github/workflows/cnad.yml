@@ -44,11 +44,11 @@ jobs:
           mkdir tmp && touch tmp/restart.txt 
           echo $RANDOM > tmp/restart.txt
 
-      - name: download / folder
+      - name: download /build folder
         uses: actions/download-artifact@v3
         with:
           name: dot_next_folder
-          path: /
+          path: /build
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
