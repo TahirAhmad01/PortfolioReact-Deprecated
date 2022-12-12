@@ -1,0 +1,73 @@
+on:
+  push:
+    branches: ["main"]
+
+name: 🚀 CNAD
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate build
+        run: npm run build
+
+      - name: Upload bulid folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: dot_next_folder
+          path: /build
+
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    needs: [build]
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Creating restart file
+        run: |
+          mkdir tmp && touch tmp/restart.txt 
+          echo $RANDOM > tmp/restart.txt
+
+      - name: download / folder
+        uses: actions/download-artifact@v3
+        with:
+          name: dot_next_folder
+          path: /
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          exclude: |
+            **/.next/cache/**
+            **/.github/**
+            **/.git/**
+            pages/**
+            css/**
+            layouts/**
+            components/**
+            lib/**
+            sitedata/**
+            postcss.config.js
+            tailwind.config.js
+            README.md
+            .gitignore
+            .eslintrc.json
