@@ -60,7 +60,9 @@ jobs:
             **/.next/cache/**
             **/.github/**
             **/.git/**
+            **/.vscode/**
             pages/**
+            src/**
             css/**
             layouts/**
             components/**
