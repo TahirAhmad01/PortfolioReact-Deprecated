@@ -65,25 +65,34 @@ export default function ContactMe() {
                 placeholder="Your Name"
                 type="text"
                 name="from_name"
+                required
               />
               <ContactInp
                 placeholder="Your Email"
                 type="email"
                 delay={150}
                 name="email"
+                required
+              />
+              <ContactInp
+                placeholder="Your phone number (optional)"
+                type="text"
+                delay={200}
+                name="phone"
               />
               <ContactInp
                 placeholder="Subject"
                 type="text"
-                delay={200}
+                delay={230}
                 name="subject"
+                required
               />
             </div>
-            <div className="w-full mt-2 md:mt-0">
+            <div className="w-full  my-2">
               <Fade right>
                 <textarea
-                  className="w-full h-full rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[100px]"
-                  placeholder="Message"
+                  className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-full"
+                  placeholder="Your Message"
                   name="message"
                   required
                 />
