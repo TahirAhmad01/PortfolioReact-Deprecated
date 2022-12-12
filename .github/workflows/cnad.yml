@@ -6,7 +6,7 @@ name: 🚀 CNAD - Auto deploy in cpanel
 
 jobs:
   build:
-    name: Build
+    name: 💥Build
     runs-on: ubuntu-latest
 
     steps:
@@ -48,7 +48,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build_folder
-          path: build
+          path: /
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
@@ -73,3 +73,6 @@ jobs:
             README.md
             .gitignore
             .eslintrc.json
+            SECURITY.md
+            .yarnrc.yml
+            package-lock.json
