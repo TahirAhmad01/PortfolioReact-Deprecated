@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dot_next_folder
-          path: /build
+          path: build/
 
   web-deploy:
     name: 🎉 Deploy
@@ -44,11 +44,11 @@ jobs:
           mkdir tmp && touch tmp/restart.txt 
           echo $RANDOM > tmp/restart.txt
 
-      - name: download /build folder
+      - name: download build folder
         uses: actions/download-artifact@v3
         with:
           name: dot_next_folder
-          path: /build
+          path: build
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
