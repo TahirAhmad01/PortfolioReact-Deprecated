@@ -27,7 +27,7 @@ jobs:
       - name: Upload bulid folder
         uses: actions/upload-artifact@v3
         with:
-          name: dot_next_folder
+          name: build_folder
           path: build/
 
   web-deploy:
