@@ -2,7 +2,7 @@ on:
   push:
     branches: ["main"]
 
-name: 🚀 CNAD
+name: 🚀 CNAD - Auto deploy in cpanel
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
       - name: download build folder
         uses: actions/download-artifact@v3
         with:
-          name: dot_next_folder
+          name: build_folder
           path: build
 
       - name: 📂 Sync files
