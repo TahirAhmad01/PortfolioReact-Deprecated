@@ -17,11 +17,13 @@ export default function Project() {
     <div className="containerCustom gap">
       <Title title="projects" />
       {path !== "/" && <ProjectButton setItem={setItems} items={items} />}
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 columns-1 gap-1 justify-items-center">
-        <AnimatePresence>
-          <Projects items={items} />
+
+      
+        <AnimatePresence><div className="grid lg:grid-cols-3 md:grid-cols-2 columns-1 gap-1 justify-items-center">
+          <Projects items={items} />  </div>
         </AnimatePresence>
-      </div>
+    
+
       {path === "/" && (
         <Fade up>
           <div className="text-center mt-9 flex justify-center">

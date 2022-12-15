@@ -5,6 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useLocation } from "react-router-dom";
 import png from "../../../assets/images/blur.webp";
+import useWindowDimensions from "../../../hook/getWindowDimensions";
 import ProjectModal from "./projectModal";
 
 export default function Projects({ items }) {
@@ -17,6 +18,7 @@ export default function Projects({ items }) {
 
   const location = useLocation();
   const path = location.pathname;
+  const { width } = useWindowDimensions();
 
   let slice;
   if (path === "/" && items.length > 9) {
@@ -33,7 +35,7 @@ export default function Projects({ items }) {
           <Fade key={item.id}>
             <motion.div
               key={item.id}
-              layout
+              layout={width > 768 ? true : false}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
