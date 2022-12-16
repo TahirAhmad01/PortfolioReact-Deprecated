@@ -8,7 +8,7 @@ import ProjectButton from "./projectButton";
 import Projects from "./projects";
 
 export default function Project() {
-  const [items, setItems] = useState(projectList);
+  const [items, setItems] = useState(projectList.sort((b, a) => a.id - b.id));
 
   const location = useLocation();
   const path = location.pathname;
@@ -18,11 +18,11 @@ export default function Project() {
       <Title title="projects" />
       {path !== "/" && <ProjectButton setItem={setItems} items={items} />}
 
-      
-        <AnimatePresence><div className="grid lg:grid-cols-3 md:grid-cols-2 columns-1 gap-1 justify-items-center">
-          <Projects items={items} />  </div>
-        </AnimatePresence>
-    
+      <AnimatePresence>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 columns-1 gap-1 justify-items-center">
+          <Projects items={items} setItem={setItems} />{" "}
+        </div>
+      </AnimatePresence>
 
       {path === "/" && (
         <Fade up>

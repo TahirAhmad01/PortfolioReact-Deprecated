@@ -6,29 +6,29 @@ const buttonList = [
   },
   {
     id: 2,
-    name: "js",
-    category: "js",
+    name: "html",
+    category: "html",
   },
   {
     id: 3,
+    name: "javascript",
+    category: "js",
+  },
+  {
+    id: 4,
     name: "jquery",
     category: "jquery",
   },
   {
-    id: 4,
+    id: 5,
     name: "react",
     category: "react",
   },
   {
-    id: 5,
+    id: 6,
     name: "redux",
     category: "redux",
-  },
-  {
-    id: 6,
-    name: "next",
-    category: "next",
-  },
+  }
 ];
 
 export default buttonList;

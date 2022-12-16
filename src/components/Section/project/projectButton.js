@@ -28,7 +28,7 @@ export default function ProjectButton({ setItem }) {
             {buttonList.map((btn, idx) => (
               <HorizontalScrollItem id={idx} key={idx}>
                 <button
-                  className={`mx-1 my-1  py-1 capitalize bg-slate-200 hover:bg-slate-300 rounded-3xl text-sm w-[4.2rem]  ${
+                  className={`mx-1 my-1  py-1 capitalize bg-slate-200 hover:bg-slate-300 rounded-3xl text-sm w-[5.5rem]  ${
                     activeBtn === btn.category
                       ? "bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl !text-white"
                       : "dark:text-black"
