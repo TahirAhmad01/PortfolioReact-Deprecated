@@ -10,7 +10,7 @@
 /coverage
 
 # production
-/build
+# /build
 .yarn
 /.yarn
 
@@ -26,4 +26,4 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json*
 package-lock.json
-yarn.lock
+yarn.lock*

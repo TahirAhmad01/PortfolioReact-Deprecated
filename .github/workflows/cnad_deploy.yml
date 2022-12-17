@@ -5,33 +5,30 @@ on:
 name: 🚀 CNAD - Auto deploy in cpanel
 
 jobs:
-  build:
-    name: 💥Build
-    runs-on: ubuntu-latest
+  # build:
+  #   name: 💥Build
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v3
+  #   steps:
+  #     - name: Clone repository
+  #       uses: actions/checkout@v3
 
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      
-      - name: clean npm
-        run: npm ci clean --force
+  #     - name: Use Node.js 16.x
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
 
-      - name: Install dependencies
-        run: npm ci --force
+  #     - name: Install dependencies
+  #       run: npm install --force
 
-      - name: Generate build
-        run: npm run build
+  #     - name: Generate build
+  #       run: npm run build
 
-      - name: Upload bulid folder
-        uses: actions/upload-artifact@v3
-        with:
-          name: build_folder
-          path: build/
+  #     - name: Upload bulid folder
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: build_folder
+  #         path: build/
 
   web-deploy:
     name: 🎉 Deploy
