@@ -42,14 +42,14 @@ export default function Layout({ children }) {
             companyName="Tahir Ahmad"
             replyTimeText="Typically replies within an hour"
             sendButton="send"
-            message="Hello! \n how can I help you?"
+            message="Hello! how can I help you?"
             open={false}
           />
 
           <button
             x-data="topBtn"
             id="topButton"
-            className={`fixed z-10 p-2 sm:p-3 bg-gray-100 text-black rounded-full shadow-md bottom-5 sm:bottom-7 right-20 sm:right-24  animate-bounce ${
+            className={`fixed z-10 p-2 sm:p-3 bg-gray-100 text-black rounded-full shadow-md bottom-[5.4rem] sm:bottom-6 right-[1.7rem] sm:right-24  animate-bounce ${
               scrollY > 250 ? "block" : "hidden"
             }`}
             onClick={backToTop}

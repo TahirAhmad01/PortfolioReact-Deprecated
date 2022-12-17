@@ -133,7 +133,7 @@
   padding: 6px 23px;
   border-radius: 103px;
   border: none;
-  background: rgb(79, 206, 93);
+  background: #128C7E;
   color: rgb(255, 255, 255);
   font-size: 15px;
   font-weight: 700;
@@ -164,7 +164,7 @@
   -webkit-box-align: center;
   -webkit-box-pack: center;
   position: fixed;
-  bottom: 25px;
+  bottom: 22px;
   right: 25px;
   transition: 0.2s ease;
   z-index: 99 !important;
