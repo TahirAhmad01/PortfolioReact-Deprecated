@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { WhatsAppWidget } from "react-whatsapp-widget";
-import "react-whatsapp-widget/dist/index.css";
+import "../assets/css/whatsappWidget.css";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import Footer from "./footer";
 import Navbar from "./nav";
@@ -40,8 +40,10 @@ export default function Layout({ children }) {
           <WhatsAppWidget
             phoneNumber="+8801610881871"
             companyName="Tahir Ahmad"
-            textReplyTime="Typically replies within an hour"
-            className="z-[200]"
+            replyTimeText="Typically replies within an hour"
+            sendButton="send"
+            message="Hello! \n how can I help you?"
+            open={false}
           />
 
           <button
