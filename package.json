@@ -29,6 +29,7 @@
     "react-toggle-dark-mode": "^1.1.1",
     "react-typed": "^1.2.0",
     "react-wavify": "^1.6.3",
+    "react-whatsapp-widget": "^2.1.0",
     "sweetalert": "^2.1.2",
     "tailwind-scrollbar-hide": "^1.1.7",
     "web-vitals": "^2.1.4"

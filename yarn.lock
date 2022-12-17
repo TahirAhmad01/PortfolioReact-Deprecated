@@ -11204,7 +11204,7 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   "version" "6.0.11"
 
-"react-icons@^4.6.0":
+"react-icons@^4.4.0", "react-icons@^4.6.0":
   "integrity" "sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.6.0.tgz"
   "version" "4.6.0"
@@ -11507,6 +11507,13 @@
   "version" "1.6.3"
   dependencies:
     "prop-types" "^15.8.1"
+
+"react-whatsapp-widget@^2.1.0":
+  "integrity" "sha512-ilrA0axcs/h0xYZj2CtVoOt9DCFqtGpkFXm22vvht0+tw8tbF3lGIkO0+AVyFpgGa7suhO8Ss7dlm9D+9yzpHg=="
+  "resolved" "https://registry.npmjs.org/react-whatsapp-widget/-/react-whatsapp-widget-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "react-icons" "^4.4.0"
 
 "react-zdog@>=1.0":
   "integrity" "sha512-L6/8Zi+Nf+faNMsSZ31HLmLlu6jcbs/jqqFvme7CFnYjAeYfhJ4HyuHKd7Pu/zk9tegv6FaJj1v+hmUwUpKLQw=="

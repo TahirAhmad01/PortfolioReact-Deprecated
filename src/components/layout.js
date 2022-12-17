@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { WhatsAppWidget } from "react-whatsapp-widget";
+import "react-whatsapp-widget/dist/index.css";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import Footer from "./footer";
 import Navbar from "./nav";
@@ -35,16 +37,23 @@ export default function Layout({ children }) {
           {children}
           <Footer />
 
+          <WhatsAppWidget
+            phoneNumber="+8801610881871"
+            companyName="Tahir Ahmad"
+            textReplyTime="Typically replies within an hour"
+            className="z-[200]"
+          />
+
           <button
             x-data="topBtn"
             id="topButton"
-            className={`fixed z-10 p-3 bg-gray-100 text-black rounded-full shadow-md bottom-10 right-10 animate-bounce ${
+            className={`fixed z-10 p-2 sm:p-3 bg-gray-100 text-black rounded-full shadow-md bottom-5 sm:bottom-7 right-20 sm:right-24  animate-bounce ${
               scrollY > 250 ? "block" : "hidden"
             }`}
             onClick={backToTop}
           >
             <svg
-              className="w-8 h-8"
+              className="w-7 h-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

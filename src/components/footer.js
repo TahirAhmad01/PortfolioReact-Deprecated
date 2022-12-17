@@ -4,15 +4,15 @@ export default function Footer() {
   return (
     <>
       <footer className=" bg-gray-100 rounded-sm shadow dark:bg-gray-800 ">
-        <div className="md:flex md:items-center md:justify-between text-center p-4 md:p-2 containerCustom">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <div className="lg:flex lg:items-center lg:justify-between text-center p-4 lg:p-2 containerCustom">
+          <span className="text-sm text-gray-500 lg:text-center dark:text-gray-400">
             © 2022{" "}
             <a href="https://Qubartech.com/" className="hover:underline">
               Qubartech
             </a>
             . All Rights Reserved.
           </span>
-          <div className="icons text-gray-600 dark:text-white/60 flex justify-center flex-wrap mt-2 md:mt-0">
+          <div className="icons text-gray-600 dark:text-white/60 flex justify-center flex-wrap mt-2 lg:mt-0">
             <a
               href="https://www.facebook.com/TahirAhmad01/"
               target="_blank"

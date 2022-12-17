@@ -41,17 +41,27 @@ function ProjectModal({ setOpen, open, projectId }) {
           >
             {name}
           </Typography>
-          <div>
-            <span className="font-medium">Using:</span>{" "}
-            {category.map((cat, idx) => (
-              <span key={idx}>{(idx ? ", " : "") + cat}</span>
-            ))}
-          </div>
-          <div className="text-sm text-gray-700 dark:text-gray-400 mt-2 mb-5">
+
+          <div className="text-sm text-gray-700 dark:text-gray-400 mt-2 mb-2">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Reprehenderit maiores quasi quod quidem blanditiis culpa, deserunt
             atque tempore ullam ratione eos quaerat, odit perferendis illum
             placeat facere recusandae dolore asperiores.
+          </div>
+
+          <div className=" mb-5">
+            {/* <span className="font-medium">Using:</span>{" "} */}
+            {category.map((cat, idx) => (
+              <>
+                {/* <span key={idx}>{(idx ? ", " : "") + cat}</span> */}
+                <div
+                  class="bg-blue-100 text-blue-800 text-xs font-medium mr-1 px-2.5 py-0.5 rounded-2xl dark:bg-blue-200 dark:text-blue-800 capitalize inline-block"
+                  key={idx}
+                >
+                  {cat}
+                </div>
+              </>
+            ))}
           </div>
 
           {(link || source) && (

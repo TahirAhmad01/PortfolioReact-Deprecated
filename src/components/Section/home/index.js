@@ -18,7 +18,7 @@ export default function Home() {
     >
       <div className="w-full h-full background">
         {" "}
-        <div className="h-auto pt-24 md:h-full bg-black/15 pb-8 md:pt-24 containerCustom relative z-20">
+        <div className="h-auto pt-24 md:h-full bg-black/15 pb-8 md:pt-24 containerCustom relative z-10">
           <div className="backdrop-blur-xl bg-white/40 dark:bg-[#0b1327]/60 rounded-2xl h-full w-full relative overflow-hidden">
             <div
               className={` flex items-center justify-center flex-col overflow-hidden md:px-28 h-full w-full relative  z-20 py-16 pb-24 mx:py-0  ${

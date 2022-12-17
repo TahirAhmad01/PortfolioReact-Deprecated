@@ -12,7 +12,7 @@ const buttonList = [
   {
     id: 3,
     name: "javascript",
-    category: "js",
+    category: "javascript",
   },
   {
     id: 4,
@@ -28,7 +28,7 @@ const buttonList = [
     id: 6,
     name: "redux",
     category: "redux",
-  }
+  },
 ];
 
 export default buttonList;

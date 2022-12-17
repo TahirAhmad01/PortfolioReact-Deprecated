@@ -54,12 +54,12 @@ export default function Projects({ items }) {
                 className="object-cover min-h-full"
                 key={idx}
               />
-              <div className="absolute bg-white/80 backdrop-blur  h-full w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
+              <div className="absolute bg-white/80 backdrop-blur  h-[80px] w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
                 <div>
-                  <span className="font-semibold capitalize text-lg">
+                  <div className="font-semibold capitalize text-base text-center">
                     {item.name}
-                  </span>
-                  <div className="text-center">
+                  </div>
+                  <div className="text-center text-sm">
                     {item.category.map((cat, idx) => (
                       <span key={idx}>{(idx ? ", " : "") + cat}</span>
                     ))}
