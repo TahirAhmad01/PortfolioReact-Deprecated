@@ -1,7 +1,7 @@
 .menu_icon {
   width: 20px;
   text-align: left;
-  margin-left: 10px;
+  margin-left: 13px;
 }
 
 .bar1,
@@ -30,7 +30,7 @@
 }
 
 .change .bar1 {
-  transform: rotate(45deg) translate(0px, 10px);
+  transform: rotate(45deg) translate(3px, 9px);
 }
 
 .change .bar2 {
@@ -40,7 +40,7 @@
 }
 
 .change .bar3 {
-  transform: rotate(-45deg) translate(0px, -11px);
+  transform: rotate(-45deg) translate(0px, -8px);
   width: 100%;
 }
 

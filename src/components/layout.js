@@ -49,7 +49,7 @@ export default function Layout({ children }) {
           <button
             x-data="topBtn"
             id="topButton"
-            className={`fixed z-10 p-2 sm:p-3 bg-gray-100 text-black rounded-full shadow-md bottom-[5.4rem] sm:bottom-6 right-[1.7rem] sm:right-24  animate-bounce ${
+            className={`fixed z-10 p-2 sm:p-3 bg-gray-100 text-black rounded-full shadow-md bottom-[7.4rem] right-[13px]  sm:bottom-[3.4rem] sm:right-24  animate-bounce ${
               scrollY > 250 ? "block" : "hidden"
             }`}
             onClick={backToTop}

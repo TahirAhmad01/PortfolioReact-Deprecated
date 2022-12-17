@@ -154,20 +154,21 @@
   cursor: pointer;
   display: flex;
   font-size: 2em;
-  height: 64px;
+  height: 52px;
   justify-content: center;
   outline: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  width: 64px;
+  width: 52px;
   -webkit-box-align: center;
   -webkit-box-pack: center;
   position: fixed;
-  bottom: 22px;
+  bottom: 61px;
   right: 25px;
   transition: 0.2s ease;
   z-index: 99 !important;
+  font-size: 1.5em;
 }
 
 ._2qp0Z:hover {
@@ -182,14 +183,6 @@
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-
-@media (max-width: 640px) {
-  ._2qp0Z {
-    width: 48px;
-    height: 48px;
-    font-size: 1.5em;
-  }
-}
 ._1yCVn {
   width: 360px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 24px 0px;
@@ -201,7 +194,7 @@
   touch-action: auto;
   display: none;
   position: fixed;
-  bottom: 110px;
+  bottom: 120px;
   right: 25px;
   z-index: 99;
 }
@@ -243,7 +236,22 @@
 
 @media (max-width: 480px) {
   ._1yCVn {
-    bottom: 85px;
-    width: calc(100% - 50px) !important;
+    bottom: 118px;
+    width: calc(100% - 30px) !important;
+    right: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  ._2qp0Z {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5em;
+    right: 13px;
+  }
+
+  ._1yCVn {
+    bottom: 118px;
+    right: 15px;
   }
 }
