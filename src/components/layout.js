@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { WhatsAppWidget } from "react-whatsapp-widget";
 import "../assets/css/whatsappWidget.css";
 import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
@@ -11,6 +12,9 @@ export default function Layout({ children }) {
 
   const { scrollY } = useWindowScrollPositions();
   const colorTheme = theme === "dark" ? "light" : "dark";
+
+  const location = useLocation();
+  const path = location.pathname;
 
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -37,15 +41,28 @@ export default function Layout({ children }) {
           {children}
           <Footer />
 
-          <WhatsAppWidget
-            phoneNumber="+8801610881871"
-            companyName="Tahir Ahmad"
-            replyTimeText="Typically replies within an hour"
-            sendButton="send"
-            message="Hello! how can I help you?"
-            open={false}
-          />
-
+          {path === "/" ? (
+            scrollY > 90 && (
+              <WhatsAppWidget
+                phoneNumber="+8801610881871"
+                companyName="Tahir Ahmad"
+                replyTimeText="Typically replies within an hour"
+                sendButton="send"
+                message="Hello! how can I help you?"
+                open={false}
+              />
+            )
+          ) : (
+            <WhatsAppWidget
+              phoneNumber="+8801610881871"
+              companyName="Tahir Ahmad"
+              replyTimeText="Typically replies within an hour"
+              sendButton="send"
+              message="Hello! how can I help you?"
+              open={false}
+            />
+          )}
+        
           <button
             x-data="topBtn"
             id="topButton"
