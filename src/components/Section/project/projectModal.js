@@ -55,7 +55,7 @@ function ProjectModal({ setOpen, open, projectId }) {
               <>
                 {/* <span key={idx}>{(idx ? ", " : "") + cat}</span> */}
                 <div
-                  class="bg-blue-100 text-blue-800 text-xs font-medium mr-1 px-2.5 py-0.5 rounded-2xl dark:bg-blue-200 dark:text-blue-800 capitalize inline-block"
+                  className="bg-blue-100 text-blue-800 text-xs font-medium mr-1 px-2.5 py-0.5 rounded-2xl dark:bg-blue-200 dark:text-blue-800 capitalize inline-block"
                   key={idx}
                 >
                   {cat}
@@ -68,16 +68,16 @@ function ProjectModal({ setOpen, open, projectId }) {
             <div className="mt-3">
               {link && (
                 <a href={link} target="_blank" rel="noreferrer">
-                  <button class="bg-violet-700 hover:bg-violet-800 text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
-                    <i class="fa-solid fa-share-from-square mr-2"></i>
+                  <button className="bg-violet-700 hover:bg-violet-800 text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
+                    <i className="fa-solid fa-share-from-square mr-2"></i>
                     <span>Live Preview</span>
                   </button>
                 </a>
               )}{" "}
               {source && (
                 <a href={source} target="_blank" rel="noreferrer">
-                  <button class="bg-slate-600 hover:bg-slate-700 text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
-                    <i class="fa-brands fa-github mr-2"></i>
+                  <button className="bg-slate-600 hover:bg-slate-700 text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
+                    <i className="fa-brands fa-github mr-2"></i>
                     <span>Github</span>
                   </button>
                 </a>
@@ -105,7 +105,7 @@ function ProjectModal({ setOpen, open, projectId }) {
             className="absolute top-3 right-3 h-8 w-8 dark:bg-[#464f56] bg-gray-200 hover:bg-gray-300 dark:hover:bg-[#27282f] dark:text-white text-gray-700 rounded-full"
             onClick={handleClose}
           >
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
           {content}
         </Box>

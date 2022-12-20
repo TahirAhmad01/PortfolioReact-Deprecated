@@ -4,6 +4,7 @@ import { Fade } from "react-reveal";
 import swal from "sweetalert";
 import Title from "../title";
 import ContactInp from "./contactInp";
+import SocialContact from "./socialContact";
 
 export default function ContactMe() {
   const [loading, setLoading] = useState(false);
@@ -58,9 +59,58 @@ export default function ContactMe() {
     <>
       <div className="containerCustom gap">
         <Title title="CONTACT" />
-        <form ref={form} onSubmit={sendEmail}>
-          <div className="md:grid md:gap-4 grid-cols-1 md:grid-cols-2 w-full">
-            <div className="w-full">
+        <div className="md:grid grid-cols-12 gap-4">
+          <div className="md:col-span-5 lg:col-span-4">
+            <div className="w-full p-4 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+              <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
+                Tell me on
+              </h5>
+              <ul className="my-4 space-y-3">
+                <SocialContact
+                  icon="fa-solid fa-envelope"
+                  name="email"
+                  link="mailto:tahirahmad0234@gmail.com"
+                  delay={100}
+                />
+                <SocialContact
+                  icon="fa-brands fa-whatsapp"
+                  name="whatsapp"
+                  link="https://wa.me/+8801610881871/"
+                  delay={150}
+                />
+                <SocialContact
+                  icon="fa-brands fa-facebook-messenger"
+                  name="messenger"
+                  link="https://www.messenger.com/t/tahirahmad01"
+                  delay={200}
+                />
+                <SocialContact
+                  icon="fab fa-linkedin-in"
+                  name="linkedin"
+                  link="https://www.linkedin.com/in/tahirahmad01/"
+                  delay={250}
+                />
+                <SocialContact
+                  icon="fab fa-twitter"
+                  name="twitter"
+                  link="https://twitter.com/tahir_ahmad01"
+                  delay={300}
+                />
+                <SocialContact
+                  icon="fab fa-instagram"
+                  name="instagram"
+                  link="https://www.instagram.com/tahir_ahmad01/"
+                  delay={350}
+                />
+              </ul>
+            </div>
+          </div>
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="md:col-span-7 lg:col-span-8 w-full h-full"
+          >
+            <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 w-full mt-4 md:mt-0">
               <ContactInp
                 placeholder="Your Name"
                 type="text"
@@ -88,31 +138,31 @@ export default function ContactMe() {
                 required
               />
             </div>
-            <div className="w-full  my-2">
-              <Fade right>
+            <div className="w-full  my-4">
+              <Fade up delay={240}>
                 <textarea
-                  className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-full"
+                  className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-[193px] lg:min-h-[326px]"
                   placeholder="Your Message"
                   name="message"
                   required
                 />
               </Fade>
             </div>
-          </div>
 
-          <Fade up>
-            <div className="text-center mt-4">
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center mr-2 mb-2 text-white transition-all disabled:opacity-75 disabled:cursor-progress"
-                name="message"
-                disabled={loading}
-              >
-                Send Message
-              </button>
-            </div>
-          </Fade>
-        </form>
+            <Fade up>
+              <div className="text-center mt-4">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center mr-2 mb-2 text-white transition-all disabled:opacity-75 disabled:cursor-progress"
+                  name="message"
+                  disabled={loading}
+                >
+                  Send Message
+                </button>
+              </div>
+            </Fade>
+          </form>
+        </div>
       </div>
     </>
   );
