@@ -87,7 +87,7 @@ export default function ContactMe() {
                 <SocialContact
                   icon="fab fa-line"
                   name="line"
-                  link="https://line.me/R/ti/p/tahir_ahmad01"
+                  link="https://line.me/ti/p/DTFqKxFPcn"
                   delay={200}
                 />
                 <SocialContact
