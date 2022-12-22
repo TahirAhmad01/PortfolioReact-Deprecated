@@ -30,46 +30,49 @@ export default function Projects({ items }) {
 
   return (
     <>
-      {slice.map((item, idx) => (
-        <Fade key={item.id}>
-          <motion.div
-            key={item.id}
-            layout={width > 768 ? true : false}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div
-              className="relative projectBtn max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden hover:cursor-pointer"
-              key={idx}
-              onClick={() => handleOpen(item.id)}
+      {slice.map((item, idx) => {
+        const { id, image, name, category } = item || {};
+        return (
+          <Fade key={idx}>
+            <motion.div
+              key={id}
+              layout={width > 768 ? true : false}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              <LazyLoadImage
-                src={item.image}
-                placeholderSrc={png}
-                alt={item.name}
-                height="100%"
-                width="100%"
-                className="object-cover min-h-full"
+              <div
+                className="relative projectBtn max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden hover:cursor-pointer"
                 key={idx}
-              />
-              <div className="absolute bg-white/80 backdrop-blur  h-[80px] w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
-                <div>
-                  <div className="font-semibold capitalize text-base text-center">
-                    {item.name}
-                  </div>
-                  <div className="text-center text-sm">
-                    {item.category.map((cat, idx) => (
-                      <span key={idx}>{(idx ? ", " : "") + cat}</span>
-                    ))}
+                onClick={() => handleOpen(id)}
+              >
+                <LazyLoadImage
+                  src={image}
+                  placeholderSrc={png}
+                  alt={name}
+                  height="100%"
+                  width="100%"
+                  className="object-cover min-h-full w-full block"
+                  key={idx}
+                />
+                <div className="absolute bg-white/80 backdrop-blur  h-[80px] w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
+                  <div>
+                    <div className="font-semibold capitalize text-base text-center">
+                      {name}
+                    </div>
+                    <div className="text-center text-sm">
+                      {category.map((cat, idx) => (
+                        <span key={idx}>{(idx ? ", " : "") + cat}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        </Fade>
-      ))}
+            </motion.div>
+          </Fade>
+        );
+      })}
 
       <ProjectModal
         open={open}

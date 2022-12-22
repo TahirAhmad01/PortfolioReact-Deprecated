@@ -5,6 +5,8 @@ import Typed from "react-typed";
 import Wave from "react-wavify";
 import avatar from "../../../assets/images/avater.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
+import SocialBtn from "../../socialBtn";
+import socialBtnList from "./../../../utils/socialBtnList.json";
 import Button from "./button";
 
 export default function Home() {
@@ -46,46 +48,14 @@ export default function Home() {
                 className="text-md md:text-xl text-gray-600 dark:text-gray-300"
               />
               <div className="icons mt-4 text-gray-600 dark:text-white/60 flex justify-center flex-wrap">
-                <a
-                  href="https://www.facebook.com/TahirAhmad01/"
-                  target="_blank"
-                  className="hover:bg-[#4267b2] customButton"
-                  rel="noreferrer"
-                >
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/tahirahmad01/"
-                  target="_blank"
-                  className="hover:bg-[#0A66C2] customButton"
-                  rel="noreferrer"
-                >
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-                <a
-                  href="https://twitter.com/tahir_ahmad01"
-                  target="_blank"
-                  className="hover:bg-[#1da1f2] customButton"
-                  rel="noreferrer"
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/tahir_ahmad01"
-                  target="_blank"
-                  className="hover:instagram customButton"
-                  rel="noreferrer"
-                >
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a
-                  href="https://github.com/TahirAhmad01"
-                  target="_blank"
-                  className="hover:bg-[#171515]  customButton "
-                  rel="noreferrer"
-                >
-                  <i className="fab fa-github "></i>
-                </a>
+                {socialBtnList.map((btn, idx) => (
+                  <SocialBtn
+                    key={idx}
+                    link={btn?.link}
+                    hover={`hover:${btn?.hover}`}
+                    icon={btn?.icon}
+                  />
+                ))}
               </div>
               <div className="flex mt-5">
                 <Link to="/contact">

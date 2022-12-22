@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../title";
+import Skills from "./../../../utils/skillData.json";
 import ProgressBar from "./progressBar";
-import { data } from "./../../../utils/skillData";
 
 export default function Skill() {
   return (
@@ -9,22 +9,16 @@ export default function Skill() {
       <div className=" containerCustom gap">
         <Title title="skill" />
         <div className="flex flex-wrap">
-          {/* <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar /> */}
-
-          {data.map((skill, idx) => (
-            <ProgressBar
-              name={skill.name}
-              progress={skill.progress}
-              key={idx}
-            />
-          ))}
+          {Skills.map((skill, idx) => {
+            const {name, progress} = skill || {};
+            return (
+              <ProgressBar
+                name={name}
+                progress={progress}
+                key={idx}
+              />
+            );
+          })}
         </div>
       </div>
     </>

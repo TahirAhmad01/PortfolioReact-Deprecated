@@ -1,4 +1,6 @@
 import React from "react";
+import socialBtnList from "../utils/socialBtnList.json";
+import SocialBtn from "./socialBtn";
 
 export default function Footer() {
   return (
@@ -13,46 +15,14 @@ export default function Footer() {
             . All Rights Reserved.
           </span>
           <div className="icons text-gray-600 dark:text-white/60 flex justify-center flex-wrap mt-2 lg:mt-0">
-            <a
-              href="https://www.facebook.com/TahirAhmad01/"
-              target="_blank"
-              className="hover:bg-[#4267b2] customButton"
-              rel="noreferrer"
-            >
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tahirahmad01/"
-              target="_blank"
-              className="hover:bg-[#0A66C2] customButton"
-              rel="noreferrer"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://twitter.com/tahir_ahmad01"
-              target="_blank"
-              className="hover:bg-[#1da1f2] customButton"
-              rel="noreferrer"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/tahir_ahmad01"
-              target="_blank"
-              className="hover:instagram customButton"
-              rel="noreferrer"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://github.com/TahirAhmad01"
-              target="_blank"
-              className="hover:bg-[#171515] customButton "
-              rel="noreferrer"
-            >
-              <i className="fab fa-github "></i>
-            </a>
+            {socialBtnList.map((btn, idx) => (
+              <SocialBtn
+                key={idx}
+                link={btn?.link}
+                hover={`hover:${btn?.hover}`}
+                icon={btn?.icon}
+              />
+            ))}
           </div>
         </div>
       </footer>

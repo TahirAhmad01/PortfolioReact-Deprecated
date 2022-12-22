@@ -111,6 +111,12 @@ export default function ContactMe() {
               </ul>
             </div>
           </div>
+          <div className="inline-flex justify-center items-center w-full md:hidden mt-4">
+            <hr className="my-8 w-[70%] h-px bg-gray-200 border-0 dark:bg-gray-700" />
+            <span className="absolute left-1/2 px-3 font-medium text-gray-900 bg-gray-50 -translate-x-1/2 dark:text-white dark:bg-gray-900">
+              or
+            </span>
+          </div>
           <form
             ref={form}
             onSubmit={sendEmail}

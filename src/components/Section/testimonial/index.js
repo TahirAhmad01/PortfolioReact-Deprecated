@@ -26,6 +26,9 @@ export default function Testimonial() {
       992: {
         items: 3,
       },
+      2000: {
+        items: 4,
+      },
     },
   };
 
@@ -35,15 +38,14 @@ export default function Testimonial() {
         <Title title="CLIENT FEEDBACK" />
         <OwlCarousel className="owl-theme" loop margin={1} {...options}>
           <Slide direction="up" duration={900}>
-            {feedbackList.map((feedback, idx) => (
-              <div key={idx}>
-                <Feedback
-                  name={feedback.name}
-                  description={feedback.description}
-                  star={feedback.star}
-                />
-              </div>
-            ))}
+            {feedbackList.map((feedback, idx) => {
+              const { name, description, star } = feedback || {};
+              return (
+                <div key={idx}>
+                  <Feedback name={name} description={description} star={star} />
+                </div>
+              );
+            })}
           </Slide>
         </OwlCarousel>
       </div>

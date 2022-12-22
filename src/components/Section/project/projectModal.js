@@ -42,7 +42,7 @@ function ProjectModal({ setOpen, open, projectId }) {
             {name}
           </Typography>
 
-          <div className="text-sm text-gray-700 dark:text-gray-400 mt-2 mb-2">
+          <div className="text-xs md:text-sm text-gray-700 dark:text-gray-400 mt-2 mb-2">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Reprehenderit maiores quasi quod quidem blanditiis culpa, deserunt
             atque tempore ullam ratione eos quaerat, odit perferendis illum
