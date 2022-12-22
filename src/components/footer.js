@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer className=" bg-gray-100 rounded-sm shadow dark:bg-gray-800 ">
-        <div className="lg:flex lg:items-center lg:justify-between text-center p-4 lg:p-2 containerCustom">
+        <div className="lg:flex lg:items-center lg:justify-between text-center p-5 lg:p-2 containerCustom">
           <span className="text-sm text-gray-500 lg:text-center dark:text-gray-400">
             © 2022{" "}
             <a href="https://Qubartech.com/" className="hover:underline">

@@ -26,17 +26,17 @@ export default function WorkExperience({
             <div className="overflow-hidden w-full">
               <div className="flex flex-col md:flex-row justify-between md:items-center">
                 <div>
-                  <h2 className="font-medium text-lg">
+                  <h2 className="font-medium text-lg ">
                     <Fade left>{workTitle}</Fade>
                   </h2>
                   <div className="text-gray-500 dark:text-gray-200 text-sm">
                     <Fade left delay={150}>
                       <div className="flex items-center">
-                        <span>
+                        <span className="inline-flex items-center capitalize gap-1">
                           <i className="fa-solid fa-house-laptop text-xs"></i>{" "}
                           {position}
                         </span>
-                        <span className="ml-3">
+                        <span className="ml-3 inline-flex items-center capitalize gap-1">
                           <i className="fa-solid fa-location-dot text-xs"></i>{" "}
                           {location}
                         </span>

@@ -85,6 +85,12 @@ export default function ContactMe() {
                   delay={200}
                 />
                 <SocialContact
+                  icon="fab fa-line"
+                  name="line"
+                  link="https://line.me/R/ti/p/tahir_ahmad01"
+                  delay={200}
+                />
+                <SocialContact
                   icon="fab fa-linkedin-in"
                   name="linkedin"
                   link="https://www.linkedin.com/in/tahirahmad01/"
@@ -108,7 +114,7 @@ export default function ContactMe() {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="md:col-span-7 lg:col-span-8 w-full h-full"
+            className="md:col-span-7 lg:col-span-8 w-full h-full flex flex-col justify-between"
           >
             <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 w-full mt-4 md:mt-0">
               <ContactInp
@@ -138,10 +144,10 @@ export default function ContactMe() {
                 required
               />
             </div>
-            <div className="w-full  my-4">
+            <div className="w-full  my-4 flex-1">
               <Fade up delay={240}>
                 <textarea
-                  className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-[193px] lg:min-h-[326px]"
+                  className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-full lg:min-h-full"
                   placeholder="Your Message"
                   name="message"
                   required
@@ -149,11 +155,11 @@ export default function ContactMe() {
               </Fade>
             </div>
 
-            <Fade up>
-              <div className="text-center mt-4">
+            <Fade up delay={450}>
+              <div className="text-center mt-1">
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center mr-2 mb-2 text-white transition-all disabled:opacity-75 disabled:cursor-progress"
+                  className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center text-white transition-all disabled:opacity-75 disabled:cursor-progress"
                   name="message"
                   disabled={loading}
                 >
