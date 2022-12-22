@@ -15,17 +15,15 @@ export default function Home() {
   return (
     <div
       className={`lightBg dark:darkBg relative ${
-        height > 650 && width > 992 && "md:h-[100vh]"
+        height > 694 && width > 992 && "h-[calc(100vh-4rem)]"
       }`}
     >
       <div className="w-full h-full background">
         {" "}
-        <div className="h-auto pt-24 md:h-full bg-black/15 pb-8 md:pt-24 containerCustom relative z-10">
+        <div className="h-auto md:h-full bg-black/15 py-9 md:py-8 containerCustom relative z-10">
           <div className="backdrop-blur-xl bg-white/40 dark:bg-[#0b1327]/60 rounded-2xl h-full w-full relative overflow-hidden">
             <div
-              className={` flex items-center justify-center flex-col overflow-hidden md:px-28 h-full w-full relative  z-20 py-16 pb-24 mx:py-0  ${
-                height > 650 && width > 992 && "pb-16"
-              }`}
+              className={`flex items-center justify-center flex-col overflow-hidden h-full w-full relative z-20 pt-20 md:pb-28 pb-32`}
             >
               <div className="h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
                 <img src={avatar} alt="avatar" />
@@ -48,14 +46,17 @@ export default function Home() {
                 className="text-md md:text-xl text-gray-600 dark:text-gray-300"
               />
               <div className="icons mt-4 text-gray-600 dark:text-white/60 flex justify-center flex-wrap">
-                {socialBtnList.map((btn, idx) => (
-                  <SocialBtn
-                    key={idx}
-                    link={btn?.link}
-                    hover={`hover:${btn?.hover}`}
-                    icon={btn?.icon}
-                  />
-                ))}
+                {socialBtnList.map((btn, idx) => {
+                  const {link, hover, icon} = btn || {};
+                  return (
+                    <SocialBtn
+                      key={idx}
+                      link={link}
+                      hover={`hover:${hover}`}
+                      icon={icon}
+                    />
+                  );
+                })}
               </div>
               <div className="flex mt-5">
                 <Link to="/contact">

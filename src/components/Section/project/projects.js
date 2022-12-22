@@ -2,9 +2,8 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import "../../../assets/css/blur.css";
 import { useLocation } from "react-router-dom";
-import png from "../../../assets/images/blur.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 import projectList from "../../../utils/projectList";
 import ProjectModal from "./projectModal";
@@ -31,7 +30,7 @@ export default function Projects({ items }) {
   return (
     <>
       {slice.map((item, idx) => {
-        const { id, image, name, category } = item || {};
+        const { id, image, name, category, imgLoad } = item || {};
         return (
           <Fade key={idx}>
             <motion.div
@@ -49,12 +48,14 @@ export default function Projects({ items }) {
               >
                 <LazyLoadImage
                   src={image}
-                  placeholderSrc={png}
+                  placeholderSrc={imgLoad}
                   alt={name}
+                  effect="blur"
                   height="100%"
                   width="100%"
                   className="object-cover min-h-full w-full block"
                   key={idx}
+                  loading="lazy"
                 />
                 <div className="absolute bg-white/80 backdrop-blur  h-[80px] w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
                   <div>

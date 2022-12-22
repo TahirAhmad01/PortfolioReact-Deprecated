@@ -15,14 +15,17 @@ export default function Footer() {
             . All Rights Reserved.
           </span>
           <div className="icons text-gray-600 dark:text-white/60 flex justify-center flex-wrap mt-2 lg:mt-0">
-            {socialBtnList.map((btn, idx) => (
-              <SocialBtn
-                key={idx}
-                link={btn?.link}
-                hover={`hover:${btn?.hover}`}
-                icon={btn?.icon}
-              />
-            ))}
+            {socialBtnList.map((btn, idx) => {
+              const { link, hover, icon } = btn || {};
+              return (
+                <SocialBtn
+                  key={idx}
+                  link={link}
+                  hover={`hover:${hover}`}
+                  icon={icon}
+                />
+              );
+            })}
           </div>
         </div>
       </footer>
