@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "../../../assets/css/blur.css";
 import { useLocation } from "react-router-dom";
+import "../../../assets/css/blur.css";
+import blur from "../../../assets/images/blur.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 import projectList from "../../../utils/projectList";
 import ProjectModal from "./projectModal";
@@ -30,9 +31,9 @@ export default function Projects({ items }) {
   return (
     <>
       {slice.map((item, idx) => {
-        const { id, image, name, category, imgLoad } = item || {};
+        const { id, image, name, category } = item || {};
         return (
-          <Fade key={idx}>
+          <Fade key={idx} className="w-full block">
             <motion.div
               key={id}
               layout={width > 768 ? true : false}
@@ -42,13 +43,14 @@ export default function Projects({ items }) {
               transition={{ duration: 0.5 }}
             >
               <div
-                className="relative projectBtn max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden hover:cursor-pointer"
+                className="relative projectBtn min-h-min max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden hover:cursor-pointer h-full"
                 key={idx}
                 onClick={() => handleOpen(id)}
               >
                 <LazyLoadImage
                   src={image}
-                  placeholderSrc={imgLoad}
+                  placeholderSrc={blur}
+                  threshold="100"
                   alt={name}
                   effect="blur"
                   height="100%"
@@ -56,6 +58,7 @@ export default function Projects({ items }) {
                   className="object-cover min-h-full w-full block"
                   key={idx}
                   loading="lazy"
+                  // beforeLoad={<div>loading</div>}
                 />
                 <div className="absolute bg-white/80 backdrop-blur  h-[80px] w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
                   <div>

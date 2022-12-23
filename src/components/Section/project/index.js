@@ -19,7 +19,7 @@ export default function Project() {
       {path !== "/" && <ProjectButton setItem={setItems} items={items} />}
 
       <AnimatePresence>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 columns-1 gap-1 justify-items-center">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 columns-1 gap-1 justify-items-center">
           <Projects items={items} setItem={setItems} />{" "}
         </div>
       </AnimatePresence>
