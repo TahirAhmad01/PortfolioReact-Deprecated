@@ -5,7 +5,7 @@ function SocialBtn({ icon, hover, link }) {
     <a
       href={link}
       target="_blank"
-      className={`hover:${hover} customButton`}
+      className={`${hover} customButton`}
       rel="noreferrer"
     >
       <i className={icon}></i>

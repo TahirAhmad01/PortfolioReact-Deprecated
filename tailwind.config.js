@@ -24,13 +24,16 @@ module.exports = {
       ubutu: ["Ubuntu", "sans-serif"],
       nunito: ["Nunito", "sans-serif"],
     },
+    colors: {
+      facebook: "#4267b2",
+    },
   },
   plugins: [
     require("flowbite/plugin"),
     require("tailwindcss"),
     require("autoprefixer"),
-    require('tailwind-scrollbar-hide'),
-    require('@tailwindcss/line-clamp'),
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/line-clamp"),
 
     plugin(function ({ addBase, addComponents, addUtilities, theme }) {
       addBase({
@@ -73,7 +76,7 @@ module.exports = {
 
         ".darkBg": {
           backgroundImage:
-            " radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,130,159,1) 0%, rgba(103,56,96,1) 90% )",
+            "radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,130,159,1) 0%, rgba(103,56,96,1) 90% )",
         },
       });
     }),
