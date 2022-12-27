@@ -30,6 +30,10 @@
     @apply w-full h-full flex justify-center items-center;
   }
 
+  .hi:hover {
+    @apply bg-red-600;
+  }
+
   .projectBtn:hover div {
     bottom: 0% !important;
   }
@@ -72,4 +76,29 @@
 .HorizontalScrollContainer_defaultLeftArrow {
   border: solid #9a9a9a !important;
   border-width: 0 3px 3px 0 !important;
+}
+
+/* social button */
+.facebook:hover {
+  background-color: #4267b2;
+}
+
+.linkedin:hover {
+  background-color: #0a66c2;
+}
+.twitter:hover {
+  background-color: #1da1f2;
+}
+.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+.github:hover {
+  background-color: #171515;
 }

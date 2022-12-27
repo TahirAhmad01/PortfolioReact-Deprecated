@@ -5,24 +5,20 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   darkMode: "class",
   important: true,
+  mode: "jit",
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      boxShadow: {
-        lightShadow: " -3px -3px 7px #ffffff, 3px 3px 5px #ceced1",
-        darkShadow: " 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b",
-        insetShadow: "inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1",
-        darkInsetShadow:
-          "inset -3px -3px 7px #393939, inset 3px 3px 5px #181818",
-      },
-    },
+    extend: {},
     fontFamily: {
       sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
       ubutu: ["Ubuntu", "sans-serif"],
       nunito: ["Nunito", "sans-serif"],
+    },
+    colors: {
+      linkedin: "#0A66C2",
     },
   },
   plugins: [
@@ -61,23 +57,6 @@ module.exports = {
         ".gap": {
           paddingTop: "55px",
           paddingBottom: "55px",
-        },
-
-        ".instagram:hover": {
-          background:
-            "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
-        },
-        ".facebook:hover": {
-          backgroundColor: "#4267b2",
-        },
-        ".linkedin:hover": {
-          backgroundColor: "#0A66C2",
-        },
-        ".twitter:hover": {
-          backgroundColor: "#1da1f2",
-        },
-        ".github:hover": {
-          backgroundColor: "#171515",
         },
 
         ".lightBg": {

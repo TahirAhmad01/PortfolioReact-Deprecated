@@ -50,14 +50,12 @@ export default function Home() {
                   const { link, hover, icon } = btn || {};
                   return (
                     <>
-                      {hover && (
-                        <SocialBtn
-                          key={idx}
-                          link={link}
-                          hover={hover}
-                          icon={icon}
-                        />
-                      )}
+                      <SocialBtn
+                        key={idx}
+                        link={link}
+                        hover={hover}
+                        icon={icon}
+                      />
                     </>
                   );
                 })}

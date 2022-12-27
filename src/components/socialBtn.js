@@ -3,13 +3,10 @@ import React from "react";
 function SocialBtn({ icon, hover, link }) {
   return (
     <>
-      <a
-        href={link}
-        target="_blank"
-        className={`${hover} customButton`}
-        rel="noreferrer"
-      >
-        <i className={icon}></i>
+      <a href={link} target="_blank" rel="noreferrer">
+        <button className={`${hover} customButton`}>
+          <i className={icon}></i>
+        </button>
       </a>
     </>
   );
