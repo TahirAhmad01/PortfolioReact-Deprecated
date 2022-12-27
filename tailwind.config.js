@@ -71,7 +71,7 @@ module.exports = {
             "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
         },
         ".facebook:hover": {
-          background: "#4267b2",
+          backgroundColor: "#4267b2",
         },
         ".linkedin:hover": {
           backgroundColor: "#0A66C2",
