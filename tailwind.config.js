@@ -24,9 +24,6 @@ module.exports = {
       ubutu: ["Ubuntu", "sans-serif"],
       nunito: ["Nunito", "sans-serif"],
     },
-    colors: {
-      facebook: "#4267b2",
-    },
   },
   plugins: [
     require("flowbite/plugin"),
