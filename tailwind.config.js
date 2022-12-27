@@ -65,10 +65,24 @@ module.exports = {
           paddingTop: "55px",
           paddingBottom: "55px",
         },
-        ".instagram": {
+
+        ".instagram:hover": {
           background:
             "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
         },
+        ".facebook:hover": {
+          background: "#4267b2",
+        },
+        ".linkedin:hover": {
+          backgroundColor: "#0A66C2",
+        },
+        ".twitter:hover": {
+          backgroundColor: "#1da1f2",
+        },
+        ".github:hover": {
+          backgroundColor: "#171515",
+        },
+
         ".lightBg": {
           backgroundImage:
             "radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,229,168,1) 0%, rgba(251,174,222,1) 100.7% )",

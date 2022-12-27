@@ -2,19 +2,19 @@
   {
     "id": 1,
     "link": "https://www.facebook.com/TahirAhmad01/",
-    "hover": "bg-facebook",
+    "hover": "facebook",
     "icon": "fab fa-facebook-f"
   },
   {
     "id": 2,
     "link": "https://www.linkedin.com/in/tahirahmad01/",
-    "hover": "bg-[#0A66C2]",
+    "hover": "linkedin",
     "icon": "fab fa-linkedin-in"
   },
   {
     "id": 3,
     "link": "https://twitter.com/tahir_ahmad01",
-    "hover": "bg-[#1da1f2]",
+    "hover": "twitter",
     "icon": "fab fa-twitter"
   },
   {
@@ -26,7 +26,7 @@
   {
     "id": 5,
     "link": "https://github.com/TahirAhmad01",
-    "hover": "bg-[#171515]",
+    "hover": "github",
     "icon": "fab fa-github"
   }
 ]

@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import PageLayout from "../components/pageLayout";
 import About from "../components/Section/about";
 import Blog from "../components/Section/blog";
 import ContactMe from "../components/Section/contactMe";
@@ -16,17 +15,17 @@ export default function Home() {
       <Helmet>
         <title>Tahir Ahmad - Portfolio</title>
       </Helmet>
-      
-      <PageLayout>
-        <TopSec />
-        <About />
-        <Skill />
-        <Project />
-        <Resume />
-        <Blog />
-        <Testimonial />
-        <ContactMe />
-      </PageLayout>
+
+      {/* <PageLayout> */}
+      <TopSec />
+      <About />
+      <Skill />
+      <Project />
+      <Resume />
+      <Blog />
+      <Testimonial />
+      <ContactMe />
+      {/* </PageLayout> */}
     </>
   );
 }

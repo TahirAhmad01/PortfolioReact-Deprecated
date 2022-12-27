@@ -21,7 +21,7 @@ export default function Footer() {
                 <SocialBtn
                   key={idx}
                   link={link}
-                  hover={`hover:${hover}`}
+                  hover={`${hover}`}
                   icon={icon}
                 />
               );

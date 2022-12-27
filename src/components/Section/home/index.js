@@ -15,12 +15,12 @@ export default function Home() {
   return (
     <div
       className={`lightBg dark:darkBg relative ${
-        height > 694 && width > 992 && "h-[calc(100vh-4rem)]"
+        height > 694 && width > 992 && "h-screen"
       }`}
     >
       <div className="w-full h-full background">
         {" "}
-        <div className="h-auto md:h-full bg-black/15 py-9 md:py-8 containerCustom relative z-10">
+        <div className="h-auto md:h-full bg-black/15 pt-24 py-8 containerCustom relative z-10">
           <div className="backdrop-blur-xl bg-white/40 dark:bg-[#0b1327]/60 rounded-2xl h-full w-full relative overflow-hidden">
             <div
               className={`flex items-center justify-center flex-col overflow-hidden h-full w-full relative z-20 pt-20 md:pb-28 pb-32`}
@@ -47,14 +47,18 @@ export default function Home() {
               />
               <div className="icons mt-4 text-gray-600 dark:text-white/60 flex justify-center flex-wrap">
                 {socialBtnList.map((btn, idx) => {
-                  const {link, hover, icon} = btn || {};
+                  const { link, hover, icon } = btn || {};
                   return (
-                    <SocialBtn
-                      key={idx}
-                      link={link}
-                      hover={`hover:${hover}`}
-                      icon={icon}
-                    />
+                    <>
+                      {hover && (
+                        <SocialBtn
+                          key={idx}
+                          link={link}
+                          hover={hover}
+                          icon={icon}
+                        />
+                      )}
+                    </>
                   );
                 })}
               </div>

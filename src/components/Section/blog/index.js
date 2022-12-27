@@ -18,13 +18,6 @@ export default function Blog(props) {
               </Fade>
             );
           })}
-
-          {/* <Fade up>
-            <BlogCard />
-          </Fade>
-          <Fade right>
-            <BlogCard />
-          </Fade> */}
         </div>
       </div>
     </>
