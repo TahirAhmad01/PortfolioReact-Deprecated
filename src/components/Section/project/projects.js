@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useLocation } from "react-router-dom";
 import "../../../assets/css/blur.css";
-import blur from "../../../assets/images/blur.webp";
+// import blur from "../../../assets/images/blur.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 import projectList from "../../../utils/projectList";
 import ProjectModal from "./projectModal";
