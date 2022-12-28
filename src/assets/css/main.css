@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  /*  */
-}
-
 @layer components {
   body {
     @apply bg-gray-50 dark:bg-[#111827];
@@ -30,14 +26,11 @@
     @apply w-full h-full flex justify-center items-center;
   }
 
-  .hi:hover {
-    @apply bg-red-600;
-  }
-
   .projectBtn:hover div {
     bottom: 0% !important;
   }
 
+  /* container */
   .containerCustom {
     padding-right: 15px !important;
     padding-left: 15px !important;
@@ -45,33 +38,35 @@
     margin-left: auto;
   }
 
-  @media (min-width: 768px) {
+  @screen md {
     .containerCustom {
       width: 750px;
     }
   }
-  @media (min-width: 992px) {
+  @screen lg {
     .containerCustom {
       width: 970px;
     }
   }
-  @media (min-width: 1200px) {
+  @screen xl {
     .containerCustom {
       width: 1170px;
     }
   }
 
-  @media (min-width: 2000px) {
+  @screen 2xl {
     .containerCustom {
-      width: 1650px;
+      width: 1230px;
     }
   }
 }
 
+/* owl-carousel */
 .owl-carousel .owl-item img {
   width: auto !important;
 }
 
+/* arrow */
 .HorizontalScrollContainer_defaultRightArrow,
 .HorizontalScrollContainer_defaultLeftArrow {
   border: solid #9a9a9a !important;

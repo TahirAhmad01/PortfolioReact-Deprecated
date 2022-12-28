@@ -5,7 +5,6 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   darkMode: "class",
   important: true,
-  mode: "jit",
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
@@ -16,9 +15,6 @@ module.exports = {
       sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
       ubutu: ["Ubuntu", "sans-serif"],
       nunito: ["Nunito", "sans-serif"],
-    },
-    colors: {
-      linkedin: "#0A66C2",
     },
   },
   plugins: [
