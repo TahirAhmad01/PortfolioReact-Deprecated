@@ -23,14 +23,14 @@ function ProjectModal({ setOpen, open, projectId }) {
   let content = null;
 
   content = findProject.map((project, idx) => {
-    const { name, image, category, link, source } = project || {};
+    const { name, imageSrc, category, link, source } = project || {};
     return (
       <>
         <div
           className="min-h-[5vh] max-h-[42vh] overflow-hidden scrollbar-hide rounded-lg"
           key={idx}
         >
-          <img src={image} alt={name} />
+          <img src={imageSrc} alt={name} />
         </div>
         <div className="py-3 px-3">
           <Typography
