@@ -1,5 +1,5 @@
 .lazy-load-image-background.blur {
-  filter: blur(11px) !important;
+filter: blur(1px) !important;
 }
 
 .lazy-load-image-background.blur.lazy-load-image-loaded {

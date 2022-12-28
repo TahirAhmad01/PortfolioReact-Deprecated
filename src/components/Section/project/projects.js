@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useLocation } from "react-router-dom";
 import "../../../assets/css/blur.css";
-// import blur from "../../../assets/images/blur.webp";
+import blur from "../../../assets/images/blur.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 import projectList from "../../../utils/projectList";
 import ProjectModal from "./projectModal";
@@ -31,7 +31,7 @@ export default function Projects({ items }) {
   return (
     <>
       {slice.map((item, idx) => {
-        const { id, image, name, category } = item || {};
+        const { id, imageSrc, placeholderSrc, name, category } = item || {};
         return (
           <Fade key={idx} className="w-full block">
             <motion.div
@@ -48,8 +48,8 @@ export default function Projects({ items }) {
                 onClick={() => handleOpen(id)}
               >
                 <LazyLoadImage
-                  src={image}
-                  placeholderSrc={image}
+                  src={imageSrc}
+                  placeholderSrc={placeholderSrc ? placeholderSrc : blur}
                   threshold="100"
                   alt={name}
                   effect="blur"
