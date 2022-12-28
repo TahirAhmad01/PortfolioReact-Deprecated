@@ -49,7 +49,7 @@ export default function Projects({ items }) {
               >
                 <LazyLoadImage
                   src={image}
-                  placeholderSrc={blur}
+                  placeholderSrc={image}
                   threshold="100"
                   alt={name}
                   effect="blur"
