@@ -43,32 +43,33 @@ export default function Projects({ items }) {
               transition={{ duration: 0.5 }}
             >
               <div
-                className="relative projectBtn min-h-min max-h-60 md:h-52 lg:h-56 w-full object-contain  overflow-hidden hover:cursor-pointer h-full"
+                className="relative projectBtn w-full object-contain  overflow-hidden hover:cursor-pointer"
                 key={idx}
                 onClick={() => handleOpen(id)}
               >
-                <LazyLoadImage
-                  src={imageSrc}
-                  placeholderSrc={placeholderSrc ? placeholderSrc : blur}
-                  threshold="100"
-                  alt={name}
-                  effect="blur"
-                  height="100%"
-                  width="100%"
-                  className="object-cover min-h-full w-full block"
-                  key={idx}
-                  loading="lazy"
-                  // beforeLoad={<div>loading</div>}
-                />
-                <div className="absolute bg-white/80 backdrop-blur  h-[80px] w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
-                  <div>
-                    <div className="font-semibold capitalize text-base text-center">
-                      {name}
-                    </div>
-                    <div className="text-center text-sm">
-                      {category.map((cat, idx) => (
-                        <span key={idx}>{(idx ? ", " : "") + cat}</span>
-                      ))}
+                <div className="h-64 sm:h-52 lg:h-56 ">
+                  <LazyLoadImage
+                    src={imageSrc}
+                    placeholderSrc={placeholderSrc ? placeholderSrc : blur}
+                    threshold="100"
+                    alt={name}
+                    effect="blur"
+                    height="100%"
+                    width="100%"
+                    className="object-cover min-h-full w-full block"
+                    key={idx}
+                    loading="lazy"
+                  />
+                  <div className="absolute bg-white/80 backdrop-blur  h-[80px] w-full -bottom-full left-0 z-30 md:flex justify-center items-center slide-up transition-all ease-in-out duration-500 dark:text-black hidden">
+                    <div>
+                      <div className="font-semibold capitalize text-base text-center">
+                        {name}
+                      </div>
+                      <div className="text-center text-sm">
+                        {category.map((cat, idx) => (
+                          <span key={idx}>{(idx ? ", " : "") + cat}</span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
