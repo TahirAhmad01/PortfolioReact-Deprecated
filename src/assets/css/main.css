@@ -73,6 +73,10 @@
   border-width: 0 3px 3px 0 !important;
 }
 
+.HorizontalScrollContainer_defaultArrowContainer {
+  min-width: 21px !important;
+}
+
 /* social button */
 .facebook:hover {
   background-color: #4267b2;

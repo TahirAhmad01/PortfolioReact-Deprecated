@@ -22,24 +22,25 @@ export default function ProjectButton({ setItem }) {
 
   return (
     <>
-      <div className="text-center mb-6 ">
+      <div className="text-center mb-6">
         <HorizontalScrollContainer>
-          <div className="flex md:justify-center w-full">
-            {buttonList.map((btn, idx) => (
-              <HorizontalScrollItem id={idx} key={idx}>
-                <button
-                  className={`mx-1 my-1  py-1 px-4 capitalize bg-slate-200 hover:bg-slate-300 rounded-3xl text-sm min-w-[4.5rem]  ${
-                    activeBtn === btn.category
-                      ? "bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl text-white"
-                      : "dark:text-black"
-                  }`}
-                  onClick={() => filterItem(btn.category)}
-                  
-                >
-                  {btn.name}
-                </button>
-              </HorizontalScrollItem>
-            ))}
+          <div className="flex items-center w-full">
+            <span className="flex m-auto">
+              {buttonList.map((btn, idx) => (
+                <HorizontalScrollItem id={idx} key={idx}>
+                  <button
+                    className={`mx-1 my-1  py-1 px-4 capitalize bg-slate-200 hover:bg-slate-300 rounded-3xl text-sm min-w-[4.5rem]  ${
+                      activeBtn === btn.category
+                        ? "bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl text-white"
+                        : "dark:text-black"
+                    }`}
+                    onClick={() => filterItem(btn.category)}
+                  >
+                    {btn.name}
+                  </button>
+                </HorizontalScrollItem>
+              ))}
+            </span>
           </div>
         </HorizontalScrollContainer>
       </div>

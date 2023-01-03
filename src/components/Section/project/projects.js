@@ -35,7 +35,6 @@ export default function Projects({ items }) {
         return (
           <Fade key={idx} className="w-full block">
             <motion.div
-              key={id}
               layout={width > 768 ? true : false}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -44,7 +43,6 @@ export default function Projects({ items }) {
             >
               <div
                 className="relative projectBtn w-full object-contain  overflow-hidden hover:cursor-pointer h-64 sm:h-52 lg:h-56 "
-                key={idx}
                 onClick={() => handleOpen(id)}
               >
                 <LazyLoadImage
