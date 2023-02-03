@@ -62,7 +62,7 @@ export default function Layout({ children }) {
               open={false}
             />
           )}
-        
+
           <button
             x-data="topBtn"
             id="topButton"

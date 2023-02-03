@@ -13,7 +13,7 @@ export default function Blog(props) {
           {blogList.map((blog, idx) => {
             const { img, title, description } = blog || {};
             return (
-              <Fade left={idx === 0} up={idx === 1} right={idx === 2}>
+              <Fade left={idx === 0} up={idx === 1} right={idx === 2} key={idx}>
                 <BlogCard img={img} title={title} description={description} />
               </Fade>
             );

@@ -2,12 +2,14 @@ import emailjs from "@emailjs/browser";
 import React, { useRef, useState } from "react";
 import { Fade } from "react-reveal";
 import swal from "sweetalert";
+import ThankYouImg from "../../../assets/images/thank-you-envelope.png";
 import Title from "../title";
 import ContactInp from "./contactInp";
 import SocialContact from "./socialContact";
 
 export default function ContactMe() {
   const [loading, setLoading] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(true);
   const form = useRef();
 
   const sendEmail = async (e) => {
@@ -23,16 +25,14 @@ export default function ContactMe() {
       )
       .then(
         (result) => {
-          console.log(result.text);
           swal({
             title: "E-mail sent successful",
             icon: "success",
             button: "Close",
             dangerMode: true,
-          });
+          }).then(setShowContactForm(false));
         },
-        (error) => {
-          console.log(error.text);
+        (err) => {
           swal({
             title: "Something went wrong",
             icon: "error",
@@ -117,63 +117,91 @@ export default function ContactMe() {
               or
             </span>
           </div>
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="md:col-span-7 lg:col-span-8 w-full h-full flex flex-col justify-between"
-          >
-            <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 w-full mt-4 md:mt-0">
-              <ContactInp
-                placeholder="Your Name"
-                type="text"
-                name="from_name"
-                required
-              />
-              <ContactInp
-                placeholder="Your Email"
-                type="email"
-                delay={150}
-                name="email"
-                required
-              />
-              <ContactInp
-                placeholder="Your phone number (optional)"
-                type="text"
-                delay={200}
-                name="phone"
-              />
-              <ContactInp
-                placeholder="Subject"
-                type="text"
-                delay={230}
-                name="subject"
-                required
-              />
-            </div>
-            <div className="w-full  my-4 flex-1">
-              <Fade up delay={240}>
-                <textarea
-                  className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-full lg:min-h-full"
-                  placeholder="Your Message"
-                  name="message"
+          {showContactForm ? (
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="md:col-span-7 lg:col-span-8 w-full h-full flex flex-col justify-between"
+            >
+              <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 w-full mt-4 md:mt-0">
+                <ContactInp
+                  placeholder="Your Name"
+                  type="text"
+                  name="from_name"
                   required
                 />
-              </Fade>
-            </div>
+                <ContactInp
+                  placeholder="Your Email"
+                  type="email"
+                  delay={150}
+                  name="email"
+                  required
+                />
+                <ContactInp
+                  placeholder="Your phone number (optional)"
+                  type="text"
+                  delay={200}
+                  name="phone"
+                />
+                <ContactInp
+                  placeholder="Subject"
+                  type="text"
+                  delay={230}
+                  name="subject"
+                  required
+                />
+              </div>
+              <div className="w-full  my-4 flex-1">
+                <Fade up delay={240}>
+                  <textarea
+                    className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-full lg:min-h-full"
+                    placeholder="Your Message"
+                    name="message"
+                    required
+                  />
+                </Fade>
+              </div>
 
-            <Fade up delay={450}>
-              <div className="text-center mt-1">
+              <Fade up delay={450}>
+                <div className="text-center mt-1">
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center text-white transition-all disabled:opacity-75 disabled:cursor-progress"
+                    name="message"
+                    disabled={loading}
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </Fade>
+            </form>
+          ) : (
+            <div className="md:col-span-7 lg:col-span-8 w-full h-full flex items-center justify-center">
+              <div className="flex flex-col items-center space-y-3">
+                <div className="w-32 h-32 flex items-center justify-center bg-green-500 rounded-full bg-gradient-to-tr from-green-400 via-blue-500 to-purple-600">
+                  <img
+                    src={ThankYouImg}
+                    alt="thank-you-envelope"
+                    border="0"
+                    className="w-20"
+                  />
+                </div>
+                <h1 className="text-4xl font-bold">Thank You !</h1>
+                <p className="text-center">
+                  for contacting us, we will reply promptly once your message is
+                  received.
+                </p>
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center text-white transition-all disabled:opacity-75 disabled:cursor-progress"
+                  className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-7 md:hover:px-12 py-3.5 text-center text-white transition-all"
                   name="message"
-                  disabled={loading}
+                  onClick={() => setShowContactForm(true)}
                 >
-                  Send Message
+                  Send Another
                 </button>
               </div>
-            </Fade>
-          </form>
+            </div>
+          )}
         </div>
       </div>
     </>
