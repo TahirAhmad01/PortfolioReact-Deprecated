@@ -188,8 +188,8 @@ export default function ContactMe() {
                 </div>
                 <h1 className="text-4xl font-bold">Thank You !</h1>
                 <p className="text-center">
-                  for contacting us, we will reply promptly once your message is
-                  received.
+                  for contacting with me, I will reply promptly once your
+                  message is received.
                 </p>
                 <button
                   type="submit"
