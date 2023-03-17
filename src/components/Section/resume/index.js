@@ -2,11 +2,13 @@ import React from "react";
 import workList from "../../../utils/workList";
 import Title from "../title";
 import WorkExperience from "./workExperience";
+import Education from './education';
 
 export default function Resume() {
-  let content;
+  let experience;
+  let university;
 
-  content = workList
+  experience = workList
     .sort((b, a) => a.id - b.id)
     .map((work, idx) => {
       const { description, endDate, startDate, workTitle, position, location } =
@@ -26,11 +28,49 @@ export default function Resume() {
       );
     });
 
+    university = workList
+      .sort((b, a) => a.id - b.id)
+      .map((work, idx) => {
+        const {
+          description,
+          endDate,
+          startDate,
+          workTitle,
+          position,
+          location,
+        } = work || {};
+
+        return (
+          <span key={idx}>
+            <Education
+              workTitle={workTitle}
+              startDate={startDate}
+              endDate={endDate}
+              description={description}
+              position={position}
+              location={location}
+            />
+          </span>
+        );
+      });
+
   return (
     <>
       <div className="containerCustom gap">
-        <Title title="experience" />
-        <div className="grid grid-cols-1 gap-4">{content}</div>
+        <Title title="Resume" />
+        <div className="grid grid-cols-1 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden mb-7">
+          <div className="px-9 py-5 border-gray-200 border-b-2 dark:border-gray-700 font-semibold text-xl">
+            Work Experience
+          </div>
+          {experience}
+        </div>
+
+        <div className="grid grid-cols-1 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
+          <div className="px-9 py-5 border-gray-200 border-b-2 dark:border-gray-700 font-semibold text-xl">
+            Education
+          </div>
+          {university}
+        </div>
       </div>
     </>
   );

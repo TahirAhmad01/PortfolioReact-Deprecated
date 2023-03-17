@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade, Zoom } from "react-reveal";
-import Icon from "../../../assets/images/work.gif";
+import Icon from "../../../assets/images/work.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 
 export default function WorkExperience({
@@ -15,7 +15,7 @@ export default function WorkExperience({
 
   return (
     <>
-      <div className="mb-3 p-6 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden flex items-center">
+      <div className="p-6 flex items-center">
         <div className=" mr-6 hidden lg:block overflow-hidden">
           <Zoom>
             <img src={Icon} alt="work_ico" className="w-64" />
