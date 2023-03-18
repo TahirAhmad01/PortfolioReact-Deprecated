@@ -1,16 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import PageLayout from "../components/pageLayout";
-import Resume from "../components/Section/resume";
+import ResumeSec from "../components/Section/resume";
 
-export default function Experience() {
+export default function Resume() {
   return (
     <>
       <Helmet>
-        <title>Experience - Tahir Ahmad</title>
+        <title>Resume - Tahir Ahmad</title>
       </Helmet>
       <PageLayout>
-        <Resume />
+        <ResumeSec />
       </PageLayout>
     </>
   );

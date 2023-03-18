@@ -4,7 +4,7 @@ import Icon from "../../../assets/images/university.png";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 
 export default function Education({
-  workTitle,
+  educationTitle,
   startDate,
   endDate,
   description,
@@ -27,14 +27,13 @@ export default function Education({
               <div className="flex flex-col md:flex-row justify-between md:items-center">
                 <div>
                   <h2 className="font-medium text-lg ">
-                    <Fade left>{workTitle}</Fade>
+                    <Fade left>{educationTitle}</Fade>
                   </h2>
                   <div className="text-gray-500 dark:text-gray-200 text-sm">
                     <Fade left delay={150}>
                       <div className="flex items-center">
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="fa-solid fa-house-laptop text-xs"></i>{" "}
-                          {position}
+                          <i className="bx bxs-graduation"></i> {position}
                         </span>
                         <span className="ml-3 inline-flex items-center capitalize gap-1">
                           <i className="fa-solid fa-location-dot text-xs"></i>{" "}

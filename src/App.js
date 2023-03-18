@@ -4,7 +4,7 @@ import "./assets/css/main.css";
 import Layout from "./components/layout";
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import Experience from "./pages/experience";
+import Experience from "./pages/Resume";
 import Home from "./pages/home";
 import PageNotFound from "./pages/pageNotFound";
 import Projects from "./pages/projects";
@@ -24,7 +24,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/skill" element={<Skill />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<Experience />} />
+        <Route path="/resume" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

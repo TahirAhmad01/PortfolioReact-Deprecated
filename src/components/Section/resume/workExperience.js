@@ -33,8 +33,7 @@ export default function WorkExperience({
                     <Fade left delay={150}>
                       <div className="flex items-center">
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="fa-solid fa-house-laptop text-xs"></i>{" "}
-                          {position}
+                          <i className="bx bxs-briefcase-alt-2"></i> {position}
                         </span>
                         <span className="ml-3 inline-flex items-center capitalize gap-1">
                           <i className="fa-solid fa-location-dot text-xs"></i>{" "}
