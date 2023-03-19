@@ -41,11 +41,11 @@ export default function WorkExperience({ work }) {
                   </h2>
                   <div className="text-gray-500 dark:text-gray-200 text-sm">
                     <Fade left delay={150}>
-                      <div className="flex items-center">
+                      <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
                         <span className="inline-flex items-center capitalize gap-1">
                           <i className="bx bxs-briefcase-alt-2"></i> {position}
                         </span>
-                        <span className="ml-3 inline-flex items-center capitalize gap-1">
+                        <span className="inline-flex items-center capitalize gap-1">
                           <i className="fa-solid fa-location-dot text-xs"></i>{" "}
                           {location}
                         </span>
@@ -87,7 +87,11 @@ export default function WorkExperience({ work }) {
                       className="rounded-xl cursor-pointer flex items-center"
                       onClick={handleOpen}
                     >
-                      <img src={image} alt={title} className="w-28 rounded-md overflow-hidden" />
+                      <img
+                        src={image}
+                        alt={title}
+                        className="w-28 rounded-md overflow-hidden"
+                      />
                       <div className="ml-2 text-gray-400"> {title}</div>
                     </div>
                   );
