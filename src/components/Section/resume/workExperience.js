@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import Icon from "../../../assets/images/work.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
+import CertificateModal from "./certificateModal";
 
-export default function WorkExperience({
-  workTitle,
-  startDate,
-  endDate,
-  description,
-  position,
-  location,
-}) {
+export default function WorkExperience({ work }) {
+  const {
+    description,
+    endDate,
+    startDate,
+    workTitle,
+    position,
+    location,
+    certificates,
+  } = work || {};
   const { width } = useWindowDimensions();
+  const [isOpen, setOpen] = useState(false);
+  const [contents, setContent] = useState([]);
+
+  const handleOpen = () => {
+    setOpen(true);
+    setContent(certificates);
+  };
 
   return (
     <>
@@ -68,10 +78,31 @@ export default function WorkExperience({
               <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
                 {description}
               </p>
+              {certificates &&
+                certificates.map((certificate, idx) => {
+                  const { image, title } = certificate || {};
+                  return (
+                    <div
+                      key={idx}
+                      className="rounded-xl cursor-pointer flex items-center"
+                      onClick={handleOpen}
+                    >
+                      <img src={image} alt={title} className="w-28 rounded-md overflow-hidden" />
+                      <div className="ml-2 text-gray-400"> {title}</div>
+                    </div>
+                  );
+                })}
             </Fade>
           </div>
         </div>
       </div>
+
+      <CertificateModal
+        contents={contents}
+        open={isOpen}
+        setOpen={setOpen}
+        handleOpen={handleOpen}
+      />
     </>
   );
 }

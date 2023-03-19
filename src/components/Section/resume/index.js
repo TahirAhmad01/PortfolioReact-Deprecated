@@ -1,9 +1,9 @@
 import React from "react";
-import workList from "../../../utils/workList";
 import educationList from "../../../utils/educationList.json";
+import workList from "../../../utils/workList";
 import Title from "../title";
+import Education from "./education";
 import WorkExperience from "./workExperience";
-import Education from './education';
 
 export default function Resume() {
   let experience;
@@ -12,55 +12,22 @@ export default function Resume() {
   experience = workList
     .sort((b, a) => a.id - b.id)
     .map((work, idx) => {
-      const {
-        description,
-        endDate,
-        startDate,
-        workTitle,
-        position,
-        location,
-      } = work || {};
-
       return (
         <span key={idx}>
-          <WorkExperience
-            workTitle={workTitle}
-            startDate={startDate}
-            endDate={endDate}
-            description={description}
-            position={position}
-            location={location}
-          />
+          <WorkExperience work={work} />
         </span>
       );
     });
 
-    university = educationList
-      .sort((b, a) => a.id - b.id)
-      .map((work, idx) => {
-        const {
-          description,
-          endDate,
-          startDate,
-          educationTitle,
-          position,
-          location,
-        } = work || {};
-
-        return (
-          <span key={idx}>
-            <Education
-              
-              educationTitle={educationTitle}
-              startDate={startDate}
-              endDate={endDate}
-              description={description}
-              position={position}
-              location={location}
-            />
-          </span>
-        );
-      });
+  university = educationList
+    .sort((b, a) => a.id - b.id)
+    .map((education, idx) => {
+      return (
+        <span key={idx}>
+          <Education education={education} />
+        </span>
+      );
+    });
 
   return (
     <>

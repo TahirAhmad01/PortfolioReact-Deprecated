@@ -65,7 +65,9 @@ export default function Home() {
                   <Button name="Get in touch" />
                 </Link>
 
-                <Button name="Download CV" />
+                <a href="../../../assets/pdf/cv.pdf" download>
+                  <Button name="Download CV" />
+                </a>
               </div>
             </div>
             <Wave

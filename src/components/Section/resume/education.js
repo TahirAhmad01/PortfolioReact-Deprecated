@@ -3,14 +3,15 @@ import { Fade, Zoom } from "react-reveal";
 import Icon from "../../../assets/images/university.png";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 
-export default function Education({
-  educationTitle,
-  startDate,
-  endDate,
-  description,
-  position,
-  location,
-}) {
+export default function Education({ education }) {
+  const {
+    description,
+    endDate,
+    startDate,
+    educationTitle,
+    position,
+    location,
+  } = education || {};
   const { width } = useWindowDimensions();
 
   return (
