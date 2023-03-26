@@ -65,7 +65,10 @@ export default function Home() {
                   <Button name="Get in touch" />
                 </Link>
 
-                <a href="../../../assets/pdf/cv.pdf" download>
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1k2sWD02DE43O65nkMLJ-s3GtwtYZrhPI"
+                  download
+                >
                   <Button name="Download CV" />
                 </a>
               </div>
