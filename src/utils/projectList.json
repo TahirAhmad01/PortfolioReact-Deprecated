@@ -178,5 +178,15 @@
     "imageSrc": "https://i.ibb.co/ZdkmKCZ/project20.png",
     "link": "https://tailwind-toggling-dark.vercel.app/",
     "source": "https://github.com/TahirAhmad01/tailwind-toggling-dark"
+  },
+  {
+    "id": 21,
+    "name": "github api test",
+    "category": ["html", "css", "react", "redux", "tailwind"],
+    "placeholderSrc": "https://i.ibb.co/LzV8ZYS/project21.png",
+    "imageSrc": "https://i.ibb.co/1qHW193/project21.png",
+    "link": "https://tailwind-toggling-dark.vercel.app/",
+    "source": "https://github.com/TahirAhmad01/tailwind-toggling-dark",
+    "description": "This project is built using popular JavaScript technologies such as React, Redux, and Tailwind CSS, and it interacts with the GitHub API to fetch a user's profile details, followers, following, and repositories. The application presents the fetched data in an intuitive and visually appealing user interface.The GitHub profile information, including the user's profile picture, username and other relevant details, is displayed prominently using a profile card component. The user's followers, following, and repositories are also displayed in separate cards, providing a summary of the corresponding data, such as counts and relevant details."
   }
 ]

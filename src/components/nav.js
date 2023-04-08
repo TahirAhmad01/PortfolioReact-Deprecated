@@ -5,7 +5,6 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import "../assets/css/mobileMenu.css";
 import avatar from "../assets/images/logo.webp";
 import useWindowDimensions from "../hook/getWindowDimensions";
-// import { useWindowScrollPositions } from "../hook/useWindowScrollPositions";
 import menuList from "../utils/manuList";
 
 export default function Navbar({ theme, toggleDarkMode }) {
@@ -13,7 +12,6 @@ export default function Navbar({ theme, toggleDarkMode }) {
   const [toggleEvent, setToggleEvent] = useState(0);
 
   const { width } = useWindowDimensions();
-  // const { scrollY } = useWindowScrollPositions();
 
   const toggle = () => setToggleEvent(Date.now());
 
@@ -26,7 +24,6 @@ export default function Navbar({ theme, toggleDarkMode }) {
 
   return (
     <React.Fragment>
-      {/* ${scrollY > 280 && "py-3"} */}
       <div
         className={`backdrop-blur-xl bg-slate-100/40 dark:bg-[#0b1327]/70 w-full top-0 left-0 fixed z-50 py-4 transition-all duration-200 border-b-2 border-inherit dark:border-gray-700 my-collapsible my-collapsible 
        
@@ -34,7 +31,12 @@ export default function Navbar({ theme, toggleDarkMode }) {
       >
         <div className="containerCustom flex items-center justify-between h-full">
           <div>
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               <h4 className="flex items-center text-xl">
                 <div className="h-9 w-9 overflow-hidden rounded-full bg-transparent">
                   <img src={avatar} alt="avatar" />

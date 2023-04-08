@@ -23,7 +23,8 @@ function ProjectModal({ setOpen, open, projectId }) {
   let content = null;
 
   content = findProject.map((project, idx) => {
-    const { name, imageSrc, category, link, source } = project || {};
+    const { name, imageSrc, category, link, source, description } =
+      project || {};
     return (
       <>
         <div
@@ -43,10 +44,11 @@ function ProjectModal({ setOpen, open, projectId }) {
           </Typography>
 
           <div className="text-xs md:text-sm text-gray-700 dark:text-gray-400 mt-2 mb-2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            {description ||
+              `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Reprehenderit maiores quasi quod quidem blanditiis culpa, deserunt
             atque tempore ullam ratione eos quaerat, odit perferendis illum
-            placeat facere recusandae dolore asperiores.
+            placeat facere recusandae dolore asperiores.`}
           </div>
 
           <div className=" mb-5">

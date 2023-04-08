@@ -24,15 +24,19 @@ export default function About() {
             <Fade up cascade>
               <h3>Hello! I Am Tahir Ahmad.</h3>{" "}
               <p className="text-sm">
-                I am a web designer. Also, I am a React front-end developer. I
-                have been doing web design for the last many years. I have
-                worked in web design with HTML5, CSS3, CSS3 Animation,
-                Bootstrap, JavaScript, JQuery, JQuery Animation, React. I am
-                ready to convert your Html conversion ( PSD, image, pdf to Html
-                ). I know many wonderful effects of use on websites and how to
-                keep the website clean. Effective and clean cross-browser
-                support has been a priority in many of the projects I've worked
-                on.
+                As an experienced front-end developer with React.js, I have been
+                actively involved in web development since 2020. My skill set
+                includes proficiency in HTML5, CSS3, CSS3 Animation, Bootstrap,
+                JavaScript, jQuery, jQuery Animation, React.js, Redux, and
+                Next.js. I am also adept at converting PSD, image, and PDF
+                designs into clean and responsive HTML code. With a keen eye for
+                creating stunning website effects and a focus on maintaining
+                clean and effective cross-browser support, I ensure seamless
+                performance across different platforms. I am also an active
+                contributor to open-source projects on GitHub, showcasing my
+                commitment to the development community. My expertise in clean
+                coding practices ensures that I deliver efficient and
+                maintainable code for optimal website performance.
               </p>
               <div className="mt-5">
                 <Fade up>

@@ -43,14 +43,16 @@ export default function Layout({ children }) {
 
           {path === "/" ? (
             scrollY > 90 && (
-              <WhatsAppWidget
-                phoneNumber="+8801610881871"
-                companyName="Tahir Ahmad"
-                replyTimeText="Typically replies within an hour"
-                sendButton="send"
-                message="Hello! how can I help you?"
-                open={false}
-              />
+              <>
+                <WhatsAppWidget
+                  phoneNumber="+8801610881871"
+                  companyName="Tahir Ahmad"
+                  replyTimeText="Typically replies within an hour"
+                  sendButton="send"
+                  message="Hello! how can I help you?"
+                  open={false}
+                />
+              </>
             )
           ) : (
             <WhatsAppWidget

@@ -8,7 +8,7 @@ function PageNotFound() {
   return (
     <>
       <Helmet>
-        <title>404 - Tahir Ahmad</title>
+        <title>404 page not found - Tahir Ahmad</title>
       </Helmet>
 
       <PageLayout>

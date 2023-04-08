@@ -84,7 +84,7 @@ export default function WorkExperience({ work }) {
                   return (
                     <div
                       key={idx}
-                      className="rounded-xl cursor-pointer flex items-center"
+                      className="rounded-xl cursor-pointer flex items-center mt-3"
                       onClick={handleOpen}
                     >
                       <img
